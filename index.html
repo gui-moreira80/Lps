@@ -1,0 +1,821 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articulador RZNH | Acabe com as Dores e Nunca Mais Perca uma Rezenha</title>
+    <meta name="description" content="Suplemento desenvolvido para quem joga bola. Colágeno Tipo II, Cúrcuma, MSM e Vitaminas D3 e K2. Frete Grátis pelo Mercado Livre Full.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rznh-green': '#1a5f3f',
+                        'rznh-light': '#2d8a5f',
+                        'rznh-dark': '#0f3d29',
+                        'rznh-accent': '#22c55e',
+                        'rznh-yellow': '#ffc107',
+                        'rznh-lime': '#84cc16'
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .hero-bg {
+            background-color: #0f3d29;
+        }
+        
+        .cta-bg {
+            background-color: #0f3d29;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .pulse-btn {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 193, 7, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+        }
+        
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .ingredient-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .ingredient-card:hover {
+            border-color: #1a5f3f;
+            transform: scale(1.02);
+        }
+        
+        .ingredient-card-dark {
+            background: linear-gradient(145deg, #1a5f3f 0%, #0f3d29 100%);
+            border: 2px solid #22c55e;
+        }
+        
+        .guarantee-badge {
+            background: linear-gradient(135deg, #1a5f3f 0%, #22c55e 100%);
+        }
+        
+        .urgency-bar {
+            background: linear-gradient(90deg, #dc2626 0%, #ef4444 100%);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-left: 4px solid #1a5f3f;
+        }
+        
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+        
+        .price-tag {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .price-tag::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -10%;
+            right: -10%;
+            height: 3px;
+            background: #ef4444;
+            transform: rotate(-15deg);
+        }
+        
+        .soccer-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 bg-gray-50">
+    
+    <!-- Urgency Top Bar -->
+    <div class="urgency-bar text-white py-2 px-4 text-center text-sm font-semibold">
+        <i class="fas fa-fire mr-2"></i>
+        🔥 OFERTA RELÂMPAGO: De R$ 59,90 por R$ 37,90 + FRETE GRÁTIS FULL
+        <span class="hidden sm:inline"> | </span>
+        <span id="countdown" class="font-mono bg-white text-red-600 px-2 py-1 rounded ml-2">23:59:59</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="/mnt/kimi/upload/RZNH%20Logotipo.jpg" alt="RZNH" class="h-12 w-auto object-contain">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beneficios" class="text-gray-700 hover:text-rznh-green font-semibold transition">Benefícios</a>
+                    <a href="#ingredientes" class="text-gray-700 hover:text-rznh-green font-semibold transition">Ingredientes</a>
+                    <a href="#garantia" class="text-gray-700 hover:text-rznh-green font-semibold transition">Garantia</a>
+                </div>
+                <a href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636#polycard_client=search-desktop&search_layout=grid&position=1&type=product&tracking_id=a0c41782-8f08-4bbf-949b-3977d47cf21a&wid=MLB4333854749&sid=search" 
+                   target="_blank" 
+                   class="bg-rznh-green hover:bg-rznh-light text-white px-6 py-2 rounded-full font-bold transition pulse-btn">
+                    COMPRAR AGORA
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg soccer-pattern text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-block bg-rznh-yellow text-rznh-dark px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+                        <i class="fas fa-futbol mr-2"></i> Feito pra quem joga bola
+                    </div>
+                    <h1 class="font-heading text-4xl lg:text-6xl font-black leading-tight text-shadow">
+                        Não Deixe as <span class="text-rznh-yellow">Dores</span> Te Tirarem da <span class="text-rznh-yellow">Rezenha</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl text-gray-100 leading-relaxed">
+                        O único suplemento desenvolvido especialmente para o jogador de futebol que não quer parar de jogar. 
+                        Colágeno Tipo II + Cúrcuma + MSM + Vitaminas D3 e K2.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" 
+                           target="_blank"
+                           class="bg-rznh-yellow hover:bg-yellow-400 text-rznh-dark text-center px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105 pulse-btn flex items-center justify-center gap-2">
+                            <i class="fas fa-shopping-cart"></i>
+                            QUERO CONTINUAR JOGANDO
+                        </a>
+                        <div class="text-center sm:text-left">
+                            <p class="text-sm text-gray-300">De <span class="price-tag text-lg">R$ 59,90</span></p>
+                            <p class="text-3xl font-black text-rznh-yellow">R$ 37,90</p>
+                            <p class="text-sm"><i class="fas fa-truck mr-1"></i> Frete Grátis Full</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm text-gray-300 pt-4">
+                        <span class="flex items-center gap-1"><i class="fas fa-check-circle text-rznh-yellow"></i> 60 Cápsulas</span>
+                        <span class="flex items-center gap-1"><i class="fas fa-check-circle text-rznh-yellow"></i> 30 Dias de Uso</span>
+                        <span class="flex items-center gap-1"><i class="fas fa-check-circle text-rznh-yellow"></i> 3 Meses de Garantia</span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-rznh-yellow rounded-full opacity-10 blur-3xl"></div>
+                    <img src="/mnt/kimi/upload/Articulador%20(2).png" 
+                         alt="Articulador RZNH" 
+                         class="relative z-10 w-full max-w-lg mx-auto float drop-shadow-2xl">
+                    
+                    <!-- Floating badges -->
+                    <div class="absolute top-10 right-0 bg-white text-rznh-dark p-3 rounded-lg shadow-lg animate-bounce">
+                        <p class="font-bold text-sm">Colágeno Tipo II</p>
+                    </div>
+                    <div class="absolute bottom-20 left-0 bg-rznh-yellow text-rznh-dark p-3 rounded-lg shadow-lg animate-bounce" style="animation-delay: 0.5s">
+                        <p class="font-bold text-sm">+ Cúrcuma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave separator -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#f9fafb"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 text-center scroll-reveal">
+            <h2 class="font-heading text-3xl lg:text-4xl font-bold text-rznh-dark mb-6">
+                Você Conhece Essa Sensação?
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-exclamation-triangle text-2xl text-red-500"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Aquela Dor no Joelho</h3>
+                    <p class="text-gray-600">No dia seguinte ao jogo, o joelho "trava" e você já pensa em ficar de fora da próxima pelada.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-injured text-2xl text-red-500"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">O Peso da Idade</h3>
+                    <p class="text-gray-600">O corpo não responde mais como antes. O que era fácil aos 20, agora dói demais aos 30+.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-sad-tear text-2xl text-red-500"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Perder a Rezenha</h3>
+                    <p class="text-gray-600">Ficar de fora do churrasco pós-jogo, da zoeira com os amigos, daquele momento que só quem joga entende.</p>
+                </div>
+            </div>
+            <p class="text-xl text-gray-700 mt-12 font-semibold">
+                Se você se identificou, o <span class="text-rznh-green font-bold">Articulador RZNH</span> foi feito pra você.
+            </p>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="beneficios" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-rznh-green font-bold uppercase tracking-wide">A Solução</span>
+                <h2 class="font-heading text-3xl lg:text-5xl font-bold text-rznh-dark mt-2">
+                    Desenvolvido por Quem Entende do Jogo
+                </h2>
+                <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Não é um colágeno genérico de farmácia. É um suplemento pensado para as exigências do futebol amador.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start scroll-reveal">
+                        <div class="w-12 h-12 bg-rznh-green rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Proteção Articular Completa</h3>
+                            <p class="text-gray-600">Colágeno Tipo II não desnaturado + Cúrcuma com ação anti-inflamatória natural. Seus joelhos vão agradecer.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start scroll-reveal">
+                        <div class="w-12 h-12 bg-rznh-green rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-bolt text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Recuperação Acelerada</h3>
+                            <p class="text-gray-600">MSM (Metilsulfonilmetano) + Magnésio para reduzir a fadiga muscular e acelerar a recuperação pós-jogo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start scroll-reveal">
+                        <div class="w-12 h-12 bg-rznh-green rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-bone text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Ossos Fortes</h3>
+                            <p class="text-gray-600">Cálcio, Vitamina D3 e K2 trabalham juntos para fortalecer sua estrutura óssea. Tackle forte sem medo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start scroll-reveal">
+                        <div class="w-12 h-12 bg-rznh-green rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-running text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">Disposição para a Pelada</h3>
+                            <p class="text-gray-600">Zinco e complexo vitamínico para manter seu sistema imune forte e sua energia em dia toda semana.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="/mnt/kimi/upload/Articulador%20(4).png" 
+                         alt="Articulador RZNH - 60 Cápsulas" 
+                         class="w-full max-w-md mx-auto rounded-2xl shadow-2xl">
+                    
+                    <div class="absolute -bottom-6 -right-6 bg-rznh-green text-white p-6 rounded-2xl shadow-xl">
+                        <p class="text-sm font-semibold">Dosagem</p>
+                        <p class="text-3xl font-black">2 caps</p>
+                        <p class="text-sm">ao dia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section id="ingredientes" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-heading text-3xl lg:text-4xl font-bold text-rznh-dark">
+                    Fórmula Campeã
+                </h2>
+                <p class="text-gray-600 mt-4">Cada ingrediente foi escolhido para maximizar sua performance no campo</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="ingredient-card p-6 rounded-xl shadow-md scroll-reveal">
+                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-dna text-2xl text-rznh-green"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Colágeno Tipo II</h3>
+                    <p class="text-sm text-gray-600 mb-3">20mg não desnaturado</p>
+                    <p class="text-gray-700 text-sm">Principal componente da cartilagem articular. Ajuda na lubrificação e absorção de impactos.</p>
+                </div>
+                
+                <div class="ingredient-card p-6 rounded-xl shadow-md scroll-reveal">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-leaf text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Cúrcuma</h3>
+                    <p class="text-sm text-gray-600 mb-3">80mg de Curcumina</p>
+                    <p class="text-gray-700 text-sm">Poderoso anti-inflamatório natural. Reduz dores e inchaços pós-atividade física.</p>
+                </div>
+                
+                <div class="ingredient-card p-6 rounded-xl shadow-md scroll-reveal">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-atom text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">MSM</h3>
+                    <p class="text-sm text-gray-600 mb-3">80mg</p>
+                    <p class="text-gray-700 text-sm">Metilsulfonilmetano - reduz inflamação, acelera recuperação muscular e alivia dores crônicas.</p>
+                </div>
+                
+                <div class="ingredient-card p-6 rounded-xl shadow-md scroll-reveal">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-sun text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Vitaminas D3 + K2</h3>
+                    <p class="text-sm text-gray-600 mb-3">50µg D3 + 24µg K2</p>
+                    <p class="text-gray-700 text-sm">Sinergia perfeita para absorção de cálcio e fortalecimento ósseo.</p>
+                </div>
+                
+                <div class="ingredient-card p-6 rounded-xl shadow-md scroll-reveal">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bone text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Cálcio + Magnésio</h3>
+                    <p class="text-sm text-gray-600 mb-3">204mg Ca + 100mg Mg</p>
+                    <p class="text-gray-700 text-sm">Minerais essenciais para saúde óssea e função muscular adequada.</p>
+                </div>
+                
+                <div class="ingredient-card p-6 rounded-xl shadow-md scroll-reveal">
+                    <div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-virus text-2xl text-gray-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Zinco</h3>
+                    <p class="text-sm text-gray-600 mb-3">11mg (100% VD)</p>
+                    <p class="text-gray-700 text-sm">Antioxidante, auxilia na recuperação muscular e fortalece o sistema imune.</p>
+                </div>
+            </div>
+            
+            <!-- Card destacado abaixo -->
+            <div class="mt-8 max-w-2xl mx-auto">
+                <div class="ingredient-card-dark p-8 rounded-xl shadow-lg scroll-reveal text-white">
+                    <div class="flex items-center gap-6">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-check-double text-4xl text-rznh-green"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-2xl mb-2">Fórmula Completa em 2 Cápsulas</h3>
+                            <p class="text-green-100 text-lg">Tudo que seu corpo precisa em uma única dose diária. Praticidade para quem tem rotina corrida.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-heading text-3xl lg:text-4xl font-bold text-rznh-dark">
+                    Como Funciona
+                </h2>
+                <p class="text-gray-600 mt-4">3 passos simples para voltar a jogar sem dor</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center scroll-reveal">
+                    <div class="w-20 h-20 bg-rznh-green rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-black relative">
+                        1
+                        <div class="hidden md:block absolute top-1/2 -right-8 w-16 h-0.5 bg-rznh-green"></div>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Tome 2 Cápsulas</h3>
+                    <p class="text-gray-600">1 cápsula após o café da manhã e 1 cápsula após o almoço. Simples e rápido.</p>
+                </div>
+                
+                <div class="text-center scroll-reveal">
+                    <div class="w-20 h-20 bg-rznh-green rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-black relative">
+                        2
+                        <div class="hidden md:block absolute top-1/2 -right-8 w-16 h-0.5 bg-rznh-green"></div>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Sinta a Diferença</h3>
+                    <p class="text-gray-600">Em poucas semanas, as dores começam a diminuir e a recuperação acelera.</p>
+                </div>
+                
+                <div class="text-center scroll-reveal">
+                    <div class="w-20 h-20 bg-rznh-green rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-black">
+                        3
+                    </div>
+                    <h3 class="font-bold text-xl mb-3">Volte a Jogar</h3>
+                    <p class="text-gray-600">Sem dor, sem limitação. Só alegria de estar na pelada e na rezenha com os amigos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testimonials -->
+    <section class="py-16 bg-rznh-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-reveal">
+                <h2 class="font-heading text-3xl lg:text-4xl font-bold">
+                    Quem Já Usou, Aprovou
+                </h2>
+                <p class="text-gray-300 mt-4">Depoimentos de quem não larga mais a pelada</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="testimonial-card p-6 rounded-lg text-gray-800 scroll-reveal">
+                    <div class="flex text-rznh-yellow mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-4 text-gray-700">"Tenho 42 anos e jogava só de 15 em 15 dias por causa do joelho. Depois de 1 mês com o RZNH, tô jogando toda semana de boa. Produto é brabo!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-rznh-green rounded-full flex items-center justify-center text-white font-bold">R</div>
+                        <div>
+                            <p class="font-bold text-sm">Ricardo M.</p>
+                            <p class="text-xs text-gray-500">São Paulo, SP</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-6 rounded-lg text-gray-800 scroll-reveal">
+                    <div class="flex text-rznh-yellow mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-4 text-gray-700">"Finalmente um suplemento que entende o jogador de pelada. Não é coisa de velho de farmácia, é pra quem curte uma rezenha mesmo. Recomendo demais!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-rznh-green rounded-full flex items-center justify-center text-white font-bold">F</div>
+                        <div>
+                            <p class="font-bold text-sm">Felipe A.</p>
+                            <p class="text-xs text-gray-500">Curitiba, PR</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-6 rounded-lg text-gray-800 scroll-reveal">
+                    <div class="flex text-rznh-yellow mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-4 text-gray-700">"Comprei pelo Mercado Livre, chegou super rápido pelo Full. Em 3 semanas já senti diferença na recuperação. Agora não fico mais de fora do racha!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-rznh-green rounded-full flex items-center justify-center text-white font-bold">M</div>
+                        <div>
+                            <p class="font-bold text-sm">Marcos T.</p>
+                            <p class="text-xs text-gray-500">Belo Horizonte, MG</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <div class="inline-flex items-center gap-2 bg-white bg-opacity-10 px-6 py-3 rounded-full">
+                    <i class="fas fa-users text-rznh-yellow"></i>
+                    <span class="font-semibold">+5 vendas no Mercado Livre</span>
+                    <span class="text-gray-300">|</span>
+                    <span class="text-rznh-yellow font-bold">100% de satisfação</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section id="garantia" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-50 rounded-3xl p-8 lg:p-12 shadow-xl border-2 border-rznh-green scroll-reveal">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center md:text-left">
+                        <div class="inline-block guarantee-badge text-white px-6 py-3 rounded-full font-bold text-lg mb-6 shadow-lg">
+                            <i class="fas fa-shield-alt mr-2"></i> GARANTIA DE 90 DIAS
+                        </div>
+                        <h2 class="font-heading text-3xl font-bold text-rznh-dark mb-4">
+                            Risco Zero para Você
+                        </h2>
+                        <p class="text-gray-600 mb-6 text-lg">
+                            Se em 3 meses você não sentir a diferença, devolvemos 100% do seu dinheiro. 
+                            Sem burocracia, sem perguntas. A gente confia no produto e quer que você confie também.
+                        </p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-rznh-green"></i>
+                                <span>3 meses de garantia total</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-rznh-green"></i>
+                                <span>Devolução 100% do valor</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-rznh-green"></i>
+                                <span>Sem perguntas, sem stress</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="relative">
+                            <div class="w-48 h-48 bg-rznh-green rounded-full flex items-center justify-center text-white text-center p-6 shadow-2xl">
+                                <div>
+                                    <p class="text-5xl font-black">90</p>
+                                    <p class="text-lg font-semibold">DIAS</p>
+                                    <p class="text-sm opacity-90">de garantia</p>
+                                </div>
+                            </div>
+                            <div class="absolute -top-4 -right-4 bg-rznh-yellow text-rznh-dark w-16 h-16 rounded-full flex items-center justify-center font-bold shadow-lg animate-bounce">
+                                100%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-reveal">
+                <h2 class="font-heading text-3xl font-bold text-rznh-dark">Dúvidas Frequentes</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden scroll-reveal">
+                    <button class="w-full px-6 py-4 text-left font-bold text-rznh-dark flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span>Quanto tempo demora para fazer efeito?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600">
+                        A maioria dos nossos clientes começa a sentir diferença na recuperação muscular em 2-3 semanas. Para os efeitos nas articulações, o ideal é usar por pelo menos 60 dias (2 potes) para sentir o resultado completo.
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden scroll-reveal">
+                    <button class="w-full px-6 py-4 text-left font-bold text-rznh-dark flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span>Posso tomar junto com outros suplementos?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600">
+                        Sim! O Articulador RZNH pode ser tomado junto com Whey, Creatina, Pré-treino e outros suplementos comuns. Ele é um suplemento alimentar completo que complementa sua rotina.
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden scroll-reveal">
+                    <button class="w-full px-6 py-4 text-left font-bold text-rznh-dark flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span>Tem contraindicação?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600">
+                        O produto é indicado para adultos. Gestantes, lactantes, crianças e pessoas com condições médicas específicas devem consultar um médico antes de usar. Pode conter traços de leite, soja, pinoli e crustáceos.
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden scroll-reveal">
+                    <button class="w-full px-6 py-4 text-left font-bold text-rznh-dark flex justify-between items-center hover:bg-gray-50 transition" onclick="toggleFaq(this)">
+                        <span>Como funciona o frete?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600">
+                        O produto está no Mercado Livre Full, ou seja, frete grátis para todo o Brasil com entrega super rápida. Você recebe em poucos dias e ainda tem toda a segurança da plataforma do Mercado Livre.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 cta-bg soccer-pattern text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="font-heading text-4xl lg:text-5xl font-black mb-6 text-shadow">
+                Não Perca Mais Nenhuma Rezenha
+            </h2>
+            <p class="text-xl mb-8 text-gray-100">
+                Junte-se aos jogadores que já descobriram o segredo para jogar toda semana sem dor.
+                <br>Oferta por tempo limitado no Mercado Livre.
+            </p>
+            
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto mb-8 border-2 border-white border-opacity-20">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <div class="text-center">
+                        <p class="text-sm text-gray-300 line-through text-lg">De R$ 59,90</p>
+                        <p class="text-5xl font-black text-rznh-yellow">R$ 37,90</p>
+                        <p class="text-sm mt-1 text-white font-semibold"><i class="fas fa-truck mr-1"></i> Frete Grátis Full</p>
+                    </div>
+                    <div class="h-16 w-px bg-white opacity-30 hidden md:block"></div>
+                    <div class="text-left">
+                        <p class="flex items-center gap-2 mb-2"><i class="fas fa-check-circle text-rznh-yellow"></i> 60 Cápsulas (30 dias)</p>
+                        <p class="flex items-center gap-2 mb-2"><i class="fas fa-check-circle text-rznh-yellow"></i> Frete Grátis</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-check-circle text-rznh-yellow"></i> Garantia 90 dias</p>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" 
+               target="_blank"
+               class="inline-block bg-rznh-yellow hover:bg-yellow-400 text-rznh-dark text-xl px-12 py-5 rounded-full font-black transition transform hover:scale-105 pulse-btn shadow-2xl">
+                <i class="fas fa-shopping-cart mr-2"></i>
+                COMPRAR NO MERCADO LIVRE
+            </a>
+            
+            <div class="mt-6 flex justify-center gap-4 text-sm text-gray-200">
+                <span class="flex items-center gap-1"><i class="fas fa-lock"></i> Compra Segura</span>
+                <span class="flex items-center gap-1"><i class="fas fa-shipping-fast"></i> Envio Full</span>
+                <span class="flex items-center gap-1"><i class="fas fa-undo"></i> Devolução Grátis</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rznh-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <img src="/mnt/kimi/upload/RZNH%20Logotipo.jpg" alt="RZNH" class="h-16 w-auto mb-4 object-contain bg-white rounded-lg p-2">
+                    <p class="text-gray-400 mb-4">
+                        Suplementos desenvolvidos para quem não abre mão de jogar bola. 
+                        Porque a rezenha não pode parar.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/rznh.br/" target="_blank" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-rznh-green transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5519996715284" target="_blank" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-green-500 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#beneficios" class="hover:text-white transition">Benefícios</a></li>
+                        <li><a href="#ingredientes" class="hover:text-white transition">Ingredientes</a></li>
+                        <li><a href="#garantia" class="hover:text-white transition">Garantia</a></li>
+                        <li><a href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" class="hover:text-white transition">Comprar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fab fa-whatsapp mr-2 text-green-400"></i> (19) 99671-5284</li>
+                        <li class="text-sm mt-4">CNPJ: 42.471.890/0001-60</li>
+                        <li class="text-sm">Contemporary Store LTDA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
+                <p class="mb-2">© 2025 RZNH - Rezenha. Todos os direitos reservados.</p>
+                <p>Este produto não é um medicamento. Mantenha fora do alcance de crianças. Produto isento de registro conforme RDC 27/2010 e 240/2018.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA Mobile -->
+    <div class="sticky-cta bg-white shadow-2xl border-t border-gray-200 p-4 md:hidden">
+        <div class="flex items-center justify-between">
+            <div>
+                <p class="text-xs text-gray-500 line-through">R$ 59,90</p>
+                <p class="text-2xl font-black text-rznh-green">R$ 37,90</p>
+            </div>
+            <a href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" 
+               target="_blank"
+               class="bg-rznh-yellow text-rznh-dark px-6 py-3 rounded-full font-bold text-sm pulse-btn">
+                COMPRAR AGORA
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+            const diff = endOfDay - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = 
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+        
+        // Sticky CTA visibility
+        const stickyCta = document.querySelector('.sticky-cta');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 500) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+            lastScroll = currentScroll;
+        });
+        
+        // FAQ Toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
