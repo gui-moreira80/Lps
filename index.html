@@ -7,11 +7,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Articulador RZNH | Suplemento para quem joga futebol</title>
-  <meta name="description" content="Articulador RZNH: suplemento alimentar com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco para pessoas com rotina ativa e futebol.">
+  <meta name="description" content="Articulador RZNH: suplemento alimentar com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco para quem joga futebol e mantém uma rotina ativa.">
   <link rel="canonical" href="https://rznh.com.br/">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Articulador RZNH | Suplemento para quem joga futebol">
-  <meta property="og:description" content="Conheça o Articulador RZNH, suplemento alimentar com colágeno tipo II, curcumina, MSM, vitaminas e minerais.">
+  <meta property="og:title" content="Articulador RZNH | Suplemento para futebol e rotina ativa">
+  <meta property="og:description" content="Fórmula com colágeno tipo II, curcumina, MSM, vitaminas e minerais. Compre pelos canais oficiais da RZNH.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rznh.com.br/">
   <meta property="og:image" content="https://rznh.com.br/Images/Articulador%20(2).png">
@@ -19,13 +19,13 @@
   <style>
     :root {
       --green: #115c3b;
-      --green-dark: #073821;
+      --green-dark: #063820;
       --green-soft: #eaf6ed;
-      --green-light: #5dbb63;
+      --green-bright: #5dbb63;
       --yellow: #f2c230;
-      --yellow-soft: #fff6d4;
+      --yellow-soft: #fff4ca;
       --ink: #1c1c1c;
-      --gray: #5f6670;
+      --gray: #626a66;
       --muted: #f4f4f4;
       --line: #dfe5e1;
       --white: #ffffff;
@@ -35,7 +35,6 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       font-family: Inter, Arial, Helvetica, sans-serif;
@@ -44,7 +43,7 @@
       line-height: 1.55;
     }
 
-    img { max-width: 100%; display: block; }
+    img { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
 
     .container {
@@ -56,22 +55,16 @@
       background: var(--ink);
       color: var(--white);
       font-size: 14px;
+      font-weight: 800;
       padding: 8px 0;
-    }
-
-    .topbar .container {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
       text-align: center;
-      flex-wrap: wrap;
     }
 
     .nav {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: rgba(255, 255, 255, 0.96);
+      z-index: 30;
+      background: rgba(255,255,255,0.96);
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(10px);
     }
@@ -88,12 +81,12 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      font-weight: 950;
       min-width: 0;
-      font-weight: 900;
     }
 
     .logo img {
-      width: 98px;
+      width: 104px;
       height: 48px;
       object-fit: contain;
       background: var(--green);
@@ -107,7 +100,7 @@
       gap: 22px;
       color: #2f3833;
       font-size: 14px;
-      font-weight: 800;
+      font-weight: 850;
     }
 
     .button {
@@ -119,25 +112,27 @@
       border-radius: 999px;
       padding: 15px 22px;
       min-height: 52px;
-      font-weight: 900;
       font-size: 15px;
+      font-weight: 950;
       text-align: center;
-      transition: transform 160ms ease, background 160ms ease, border 160ms ease;
+      cursor: pointer;
+      transition: transform 160ms ease, background 160ms ease, border 160ms ease, color 160ms ease;
     }
 
     .button:hover { transform: translateY(-1px); }
     .button-primary { background: var(--yellow); color: var(--ink); }
-    .button-dark { background: var(--green); color: var(--white); }
-    .button-secondary { color: var(--white); border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.1); }
+    .button-green { background: var(--green); color: var(--white); }
     .button-outline { background: var(--white); color: var(--ink); border-color: var(--line); }
+    .button-ghost { color: var(--white); border-color: rgba(255,255,255,0.38); background: rgba(255,255,255,0.11); }
+    .button-full { width: 100%; }
 
     .hero {
       position: relative;
-      color: var(--white);
-      min-height: calc(100vh - 110px);
       overflow: hidden;
+      min-height: calc(100vh - 110px);
+      color: var(--white);
       background:
-        linear-gradient(90deg, rgba(7,56,33,0.92) 0%, rgba(7,56,33,0.82) 44%, rgba(7,56,33,0.34) 100%),
+        linear-gradient(90deg, rgba(6,56,32,0.96) 0%, rgba(6,56,32,0.88) 42%, rgba(6,56,32,0.36) 100%),
         url("Images/Articulador (2).png") center right / cover no-repeat;
     }
 
@@ -145,68 +140,67 @@
       min-height: calc(100vh - 110px);
       display: grid;
       align-items: center;
-      padding: 64px 0 72px;
+      padding: 56px 0 76px;
     }
 
-    .hero-content {
-      max-width: 760px;
-    }
-
+    .hero-content { max-width: 760px; }
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(242, 194, 48, 0.14);
       color: var(--yellow);
-      border: 1px solid rgba(242, 194, 48, 0.34);
-      padding: 8px 12px;
+      background: rgba(242,194,48,0.14);
+      border: 1px solid rgba(242,194,48,0.36);
       border-radius: 999px;
+      padding: 8px 12px;
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 950;
       text-transform: uppercase;
       letter-spacing: 0;
     }
 
-    h1, h2, h3 {
-      line-height: 1.08;
-      margin: 0;
-      letter-spacing: 0;
-    }
-
+    h1, h2, h3 { margin: 0; line-height: 1.08; letter-spacing: 0; }
     h1 {
-      margin-top: 22px;
-      font-size: clamp(42px, 6vw, 76px);
       max-width: 760px;
+      margin-top: 22px;
+      font-size: clamp(42px, 6vw, 74px);
     }
 
     .hero-copy {
-      max-width: 660px;
+      max-width: 680px;
       margin: 22px 0 0;
-      color: rgba(255,255,255,0.9);
+      color: rgba(255,255,255,0.91);
       font-size: 21px;
     }
 
     .cta-row {
       display: flex;
-      gap: 14px;
       flex-wrap: wrap;
+      gap: 14px;
       margin-top: 32px;
     }
 
-    .hero-proof {
+    .microcopy {
+      margin: 12px 0 0;
+      color: rgba(255,255,255,0.78);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .proof-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 12px;
+      max-width: 800px;
       margin-top: 34px;
-      max-width: 720px;
     }
 
     .proof-item {
+      min-height: 86px;
       border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.1);
       border-radius: var(--radius);
+      background: rgba(255,255,255,0.1);
       padding: 14px;
-      min-height: 84px;
     }
 
     .proof-item strong {
@@ -220,330 +214,437 @@
     .proof-item span {
       color: rgba(255,255,255,0.88);
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 760;
     }
 
     .section { padding: 82px 0; }
     .section-muted { background: var(--muted); }
     .section-green { background: var(--green); color: var(--white); }
-    .section-head { max-width: 800px; margin-bottom: 36px; }
+    .section-head { max-width: 820px; margin-bottom: 36px; }
     .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
-    .section-kicker { color: var(--green); font-weight: 900; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+    .section-kicker {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 950;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
     .section-green .section-kicker { color: var(--yellow); }
     .section h2 { font-size: clamp(30px, 4vw, 48px); }
-    .section-head p { color: var(--gray); font-size: 18px; margin: 16px 0 0; }
+    .section-head p {
+      margin: 16px 0 0;
+      color: var(--gray);
+      font-size: 18px;
+    }
     .section-green .section-head p { color: rgba(255,255,255,0.86); }
 
-    .benefit-strip {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--white);
-    }
-
-    .benefit {
-      padding: 24px;
-      border-right: 1px solid var(--line);
-      min-height: 190px;
-    }
-
-    .benefit:last-child { border-right: 0; }
-    .benefit .tag { color: var(--green); font-size: 13px; font-weight: 900; text-transform: uppercase; }
-    .benefit h3 { font-size: 21px; margin: 12px 0 10px; }
-    .benefit p { margin: 0; color: var(--gray); }
-
-    .split {
-      display: grid;
-      grid-template-columns: 0.92fr 1.08fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .visual-stack {
-      display: grid;
-      gap: 14px;
-    }
-
-    .product-shot {
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--white);
-      border: 1px solid var(--line);
-    }
-
-    .product-shot img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    .ingredient-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .ingredient {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 20px;
-      min-height: 174px;
-    }
-
-    .ingredient strong {
-      display: block;
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .ingredient p {
-      margin: 0;
-      color: var(--gray);
-    }
-
-    .ingredient small {
-      display: block;
-      margin-top: 10px;
-      color: var(--green);
-      font-weight: 900;
-      text-transform: uppercase;
-      font-size: 12px;
-    }
-
-    .routine-grid {
+    .who-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
 
-    .routine-card {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.18);
+    .signal-card,
+    .benefit-card,
+    .ingredient-card,
+    .objection-card,
+    .trust-card {
+      border: 1px solid var(--line);
       border-radius: var(--radius);
+      background: var(--white);
       padding: 24px;
-      min-height: 220px;
     }
 
-    .routine-card .num {
-      color: var(--yellow);
-      font-size: 13px;
-      font-weight: 900;
-      text-transform: uppercase;
+    .signal-card { min-height: 190px; }
+    .signal-card .number,
+    .benefit-card .icon,
+    .ingredient-card .dose {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--ink);
+      font-weight: 950;
+      margin-bottom: 16px;
+      padding: 0 12px;
     }
 
-    .routine-card h3 {
-      font-size: 23px;
-      margin: 12px 0 10px;
+    .signal-card h3,
+    .benefit-card h3,
+    .ingredient-card h3,
+    .objection-card h3,
+    .trust-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
     }
 
-    .routine-card p {
+    .signal-card p,
+    .benefit-card p,
+    .ingredient-card p,
+    .objection-card p,
+    .trust-card p {
       margin: 0;
-      color: rgba(255,255,255,0.84);
+      color: var(--gray);
     }
 
-    .list {
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 42px;
+      align-items: center;
+    }
+
+    .problem-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .problem-item {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .problem-item b {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--ink);
+      font-weight: 950;
+    }
+
+    .problem-item strong { display: block; margin-bottom: 4px; }
+    .problem-item span { color: rgba(255,255,255,0.82); }
+
+    .image-frame {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 22px 70px rgba(0,0,0,0.16);
+    }
+
+    .image-frame img {
+      width: 100%;
+      min-height: 360px;
+      object-fit: cover;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .benefit-card {
+      min-height: 232px;
+      border-top: 5px solid var(--green);
+    }
+
+    .ingredient-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .ingredient-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .ingredient-card .dose {
+      min-width: 64px;
+      background: var(--green-soft);
+      color: var(--green);
+      border: 1px solid #cce5d3;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .routine {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .routine-step {
+      background: var(--white);
+      padding: 22px;
+      min-height: 170px;
+    }
+
+    .routine-step b {
+      color: var(--green);
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 950;
+    }
+
+    .routine-step h3 { font-size: 20px; margin: 10px 0 8px; }
+    .routine-step p { margin: 0; color: var(--gray); }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .product-panel {
+      border-radius: var(--radius);
+      background: var(--white);
+      color: var(--ink);
+      padding: 24px;
+      box-shadow: 0 18px 54px rgba(0,0,0,0.18);
+    }
+
+    .product-panel img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: contain;
+      background: #fff;
+    }
+
+    .price-note {
+      border-top: 1px solid var(--line);
+      margin-top: 18px;
+      padding-top: 18px;
+      color: var(--gray);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .trust-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .trust-card {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.2);
+      color: var(--white);
+    }
+
+    .trust-card p { color: rgba(255,255,255,0.82); }
+
+    .buy-box {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 0.88fr);
+      gap: 36px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      padding: 30px;
+    }
+
+    .buy-box ul {
       display: grid;
       gap: 12px;
-      margin: 0;
+      margin: 22px 0 0;
       padding: 0;
       list-style: none;
+      color: var(--gray);
     }
 
-    .list li {
-      display: flex;
+    .buy-box li {
+      display: grid;
+      grid-template-columns: 26px 1fr;
       gap: 10px;
-      align-items: flex-start;
-      color: #374151;
+      align-items: start;
     }
 
     .check {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: var(--green-soft);
       color: var(--green);
-      font-weight: 900;
-      flex: 0 0 auto;
+      font-weight: 950;
     }
 
-    .trust-panel {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 28px;
-    }
-
-    .trust-panel h3 {
-      font-size: 26px;
-      margin-bottom: 14px;
-    }
-
-    .buy-box {
-      border: 2px solid var(--green);
-      border-radius: var(--radius);
-      padding: 28px;
-      background: var(--white);
-      position: sticky;
-      top: 96px;
-    }
-
-    .buy-box h3 { font-size: 26px; }
-    .buy-box p { color: var(--gray); }
-
-    .price {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      margin: 18px 0;
-    }
-
-    .price strong {
-      font-size: 42px;
-      color: var(--green);
-      line-height: 1;
-    }
-
-    .price span {
-      color: var(--gray);
-      text-decoration: line-through;
-    }
-
-    .buy-actions {
-      display: grid;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .button-full { width: 100%; }
-
-    .warning {
-      border-left: 4px solid var(--yellow);
-      background: #fffbeb;
-      color: #5f4700;
-      padding: 18px;
-      border-radius: var(--radius);
-      margin-top: 22px;
-    }
-
-    .faq {
+    .marketplace-card {
       display: grid;
       gap: 12px;
-      max-width: 900px;
-      margin: 0 auto;
+      padding: 22px;
+      border-radius: var(--radius);
+      background: var(--muted);
+    }
+
+    .objection-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .label-warning {
+      margin-top: 28px;
+      border-left: 5px solid var(--yellow);
+      background: var(--yellow-soft);
+      padding: 18px;
+      border-radius: var(--radius);
+      color: #4b411d;
+      font-weight: 720;
     }
 
     details {
-      background: var(--white);
       border: 1px solid var(--line);
       border-radius: var(--radius);
+      background: var(--white);
       padding: 18px 20px;
     }
 
+    details + details { margin-top: 12px; }
     summary {
       cursor: pointer;
-      font-weight: 900;
-      color: var(--ink);
-    }
-
-    details p {
-      color: var(--gray);
-      margin: 12px 0 0;
-    }
-
-    .final {
-      background: var(--green);
-      color: var(--white);
-      text-align: center;
-    }
-
-    .final p {
-      color: rgba(255,255,255,0.86);
-      max-width: 760px;
-      margin: 16px auto 0;
+      font-weight: 950;
       font-size: 18px;
     }
 
-    .footer {
+    details p { color: var(--gray); margin: 12px 0 0; }
+
+    .final-cta {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .final-cta p {
+      color: rgba(255,255,255,0.86);
+      font-size: 18px;
+      margin: 16px 0 0;
+    }
+
+    footer {
       background: var(--ink);
       color: var(--white);
-      padding: 44px 0;
+      padding: 42px 0 92px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.4fr 0.8fr 0.8fr;
-      gap: 32px;
+      grid-template-columns: 1.3fr 0.7fr 1fr;
+      gap: 34px;
     }
 
-    .footer p, .footer a, .footer li {
-      color: rgba(255,255,255,0.72);
-    }
-
-    .footer ul {
-      padding: 0;
-      margin: 14px 0 0;
-      list-style: none;
-      display: grid;
-      gap: 8px;
-    }
-
-    .footer-logo {
-      width: 120px;
+    footer img {
+      width: 108px;
+      height: 54px;
+      object-fit: contain;
       background: var(--green);
       border-radius: 6px;
-      padding: 8px;
-      margin-bottom: 18px;
+      padding: 6px;
+      margin-bottom: 14px;
+    }
+
+    footer p, footer li {
+      color: rgba(255,255,255,0.72);
+      margin: 0;
+    }
+
+    footer ul {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
     }
 
     .legal {
-      border-top: 1px solid rgba(255,255,255,0.12);
-      margin-top: 32px;
-      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.14);
+      margin-top: 28px;
+      padding-top: 18px;
       font-size: 13px;
-      color: rgba(255,255,255,0.62);
     }
 
-    .sticky-mobile { display: none; }
+    .mobile-sticky {
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 40;
+      background: rgba(255,255,255,0.96);
+      border-top: 1px solid var(--line);
+      padding: 10px 14px;
+      backdrop-filter: blur(12px);
+    }
 
-    @media (max-width: 960px) {
+    @media (max-width: 980px) {
       .nav-links { display: none; }
       .hero {
+        min-height: auto;
         background:
-          linear-gradient(180deg, rgba(7,56,33,0.96) 0%, rgba(7,56,33,0.86) 58%, rgba(7,56,33,0.34) 100%),
+          linear-gradient(180deg, rgba(6,56,32,0.94) 0%, rgba(6,56,32,0.82) 48%, rgba(6,56,32,0.42) 100%),
           url("Images/Articulador (2).png") center bottom / cover no-repeat;
       }
-      .split, .footer-grid { grid-template-columns: 1fr; }
-      .benefit-strip, .routine-grid { grid-template-columns: 1fr; }
-      .benefit { border-right: 0; border-bottom: 1px solid var(--line); min-height: auto; }
-      .benefit:last-child { border-bottom: 0; }
-      .buy-box { position: static; }
+      .hero .container {
+        min-height: 740px;
+        align-items: start;
+        padding-top: 44px;
+      }
+      .hero-content { max-width: 680px; }
+      .proof-grid,
+      .benefit-grid,
+      .routine,
+      .objection-grid,
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .split,
+      .trust-grid,
+      .buy-box {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 680px) {
       .container { width: min(100% - 28px, var(--max)); }
       .topbar { font-size: 13px; }
-      .nav-inner { height: 66px; }
-      .logo span, .nav .button { display: none; }
-      .hero, .hero .container { min-height: 720px; }
-      .hero .container { align-items: start; padding: 44px 0 54px; }
-      h1 { font-size: 43px; }
+      .nav-inner { height: 64px; }
+      .logo img { width: 92px; height: 42px; }
+      .nav .button { display: none; }
+      .hero .container {
+        min-height: 720px;
+        padding: 34px 0 46px;
+      }
+      h1 { font-size: 42px; }
       .hero-copy { font-size: 18px; }
       .button { width: 100%; }
-      .hero-proof { grid-template-columns: 1fr; }
-      .section { padding: 58px 0; }
-      .ingredient-grid { grid-template-columns: 1fr; }
-      .sticky-mobile {
-        position: fixed;
-        z-index: 30;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: block;
-        background: var(--white);
-        border-top: 1px solid var(--line);
-        padding: 10px 14px;
-        box-shadow: 0 -12px 28px rgba(0,0,0,0.12);
+      .proof-grid,
+      .who-grid,
+      .benefit-grid,
+      .ingredient-grid,
+      .routine,
+      .objection-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
       }
-      body { padding-bottom: 74px; }
+      .proof-item { min-height: auto; }
+      .section { padding: 60px 0; }
+      .section h2 { font-size: 32px; }
+      .ingredient-card { grid-template-columns: 1fr; }
+      .buy-box { padding: 22px; }
+      .mobile-sticky { display: block; }
     }
   </style>
 </head>
@@ -552,302 +653,314 @@
   <noscript><iframe src="https://server.rznh.com.br/ns.html?id=GTM-TFFJCZXS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <div class="topbar">
-    <div class="container">
-      <strong>Compra oficial RZNH</strong>
-      <span>Disponível no Mercado Livre e Amazon.</span>
-    </div>
-  </div>
+  <div class="topbar">Compra pelos canais oficiais: Mercado Livre e Amazon</div>
 
-  <nav class="nav" aria-label="Navegação principal">
+  <header class="nav">
     <div class="container nav-inner">
-      <a class="logo" href="#inicio" aria-label="RZNH">
-        <img src="Images/RZNH Logotipo.jpg" alt="Logotipo da RZNH">
-        <span>RZNH</span>
+      <a class="logo" href="#top" aria-label="RZNH">
+        <img src="Images/RZNH Logotipo.jpg" alt="Logotipo RZNH">
+        <span>Articulador</span>
       </a>
-      <div class="nav-links">
+      <nav class="nav-links" aria-label="Navegação principal">
         <a href="#beneficios">Benefícios</a>
         <a href="#ingredientes">Ingredientes</a>
-        <a href="#rotina">Rotina</a>
-        <a href="#comprar">Comprar</a>
-      </div>
-      <a class="button button-primary" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener">Comprar agora</a>
+        <a href="#confianca">Confiança</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+      <a class="button button-primary js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener" data-cta="header_ml">Comprar agora</a>
     </div>
-  </nav>
+  </header>
 
-  <main id="inicio">
-    <section class="hero">
+  <main id="top">
+    <section class="hero" aria-label="Articulador RZNH">
       <div class="container">
         <div class="hero-content">
-          <span class="eyebrow">Articulador RZNH</span>
-          <h1>Suplemento para quem joga futebol e leva a rotina a sério</h1>
-          <p class="hero-copy">
-            Uma fórmula com colágeno tipo II, curcumina, MSM, vitaminas e minerais para complementar a rotina de quem vive o impacto, o corre e a constância do futebol.
-          </p>
+          <span class="eyebrow">Suplemento alimentar para rotina ativa</span>
+          <h1>Suporte articular para quem joga futebol toda semana</h1>
+          <p class="hero-copy">Articulador RZNH combina colágeno tipo II, curcumina, MSM, vitaminas e minerais em uma fórmula pensada para quem vive o impacto, o corre e a constância do futebol.</p>
           <div class="cta-row">
-            <a class="button button-primary" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener">Comprar no Mercado Livre</a>
-            <a class="button button-secondary" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/" target="_blank" rel="noopener">Ver na Amazon</a>
+            <a class="button button-primary js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener" data-cta="hero_ml">Comprar no Mercado Livre</a>
+            <a class="button button-ghost js-cta" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/" target="_blank" rel="noopener" data-cta="hero_amazon">Ver na Amazon</a>
           </div>
-          <div class="hero-proof" aria-label="Destaques do produto">
-            <div class="proof-item"><strong>60</strong><span>cápsulas por embalagem</span></div>
-            <div class="proof-item"><strong>7</strong><span>ingredientes ativos na fórmula</span></div>
-            <div class="proof-item"><strong>BR</strong><span>marca brasileira para futebol</span></div>
+          <p class="microcopy">60 cápsulas. Compra online. Envio e checkout pelos marketplaces.</p>
+          <div class="proof-grid" aria-label="Diferenciais do produto">
+            <div class="proof-item"><strong>7</strong><span>ativos na fórmula</span></div>
+            <div class="proof-item"><strong>60</strong><span>cápsulas por frasco</span></div>
+            <div class="proof-item"><strong>BR</strong><span>marca brasileira de futebol</span></div>
+            <div class="proof-item"><strong>2</strong><span>cápsulas ao dia</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="beneficios" class="section">
+    <section class="section">
       <div class="container">
         <div class="section-head center">
-          <div class="section-kicker">Por que considerar</div>
-          <h2>Feito para complementar a rotina de quem joga toda semana</h2>
-          <p>O Articulador RZNH não promete milagre. Ele organiza em uma única fórmula nutrientes usados por pessoas que querem cuidar melhor da rotina física, especialmente em esportes de impacto como o futebol.</p>
+          <div class="section-kicker">Para quem faz sentido</div>
+          <h2>Para o jogador amador que quer cuidar melhor da rotina fora de campo</h2>
+          <p>O futebol de fim de semana também cobra do corpo: arranques, giros, impacto, divididas e repetição. A proposta da RZNH é complementar a rotina de cuidado, sem promessa milagrosa.</p>
         </div>
-
-        <div class="benefit-strip">
-          <article class="benefit">
-            <span class="tag">Articulacoes</span>
-            <h3>Suporte nutricional para mobilidade</h3>
-            <p>Colágeno tipo II, curcumina e MSM são ingredientes comuns em fórmulas voltadas ao cuidado articular.</p>
+        <div class="who-grid">
+          <article class="signal-card">
+            <span class="number">01</span>
+            <h3>Quem joga com frequência</h3>
+            <p>Para quem tem pelada, society, campo ou treino toda semana e quer manter consistência na rotina.</p>
           </article>
-          <article class="benefit">
-            <span class="tag">Ossos e musculos</span>
-            <h3>Vitaminas e minerais essenciais</h3>
-            <p>Vitamina D, vitamina K, cálcio, magnésio e zinco participam de funções importantes no organismo.</p>
+          <article class="signal-card">
+            <span class="number">02</span>
+            <h3>Quem sente o impacto do jogo</h3>
+            <p>Para pessoas que querem dar mais atenção a articulações, músculos, ossos e recuperação geral.</p>
           </article>
-          <article class="benefit">
-            <span class="tag">Rotina ativa</span>
-            <h3>Para quem não quer parar</h3>
-            <p>Pensado para quem joga, treina, trabalha e busca manter mais consistência nos cuidados fora de campo.</p>
-          </article>
-          <article class="benefit">
-            <span class="tag">Praticidade</span>
-            <h3>Uso simples no dia a dia</h3>
-            <p>Cápsulas, compra online e canais oficiais em marketplaces conhecidos pelo consumidor brasileiro.</p>
+          <article class="signal-card">
+            <span class="number">03</span>
+            <h3>Quem prefere praticidade</h3>
+            <p>Uma fórmula em cápsulas, com compra online e canais oficiais em marketplaces conhecidos.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="ingredientes" class="section section-muted">
+    <section class="section section-green">
       <div class="container split">
         <div>
-          <div class="section-head">
-            <div class="section-kicker">Ingredientes</div>
-            <h2>O que cada ingrediente agrega à fórmula</h2>
-            <p>Uma leitura simples da composição para quem quer entender o produto antes de comprar. As descrições abaixo são informativas e não substituem avaliação profissional.</p>
-          </div>
-          <div class="visual-stack">
-            <div class="product-shot">
-              <img src="Images/Articulador (4).png" alt="Frente, verso e informações do frasco Articulador RZNH">
-            </div>
+          <div class="section-kicker">O problema real</div>
+          <h2>O corpo sente quando a rotina é só jogar e não cuidar</h2>
+          <p class="hero-copy">O Articulador RZNH entra como parte de uma rotina mais inteligente: alimentação, hidratação, descanso, fortalecimento e suplementação quando fizer sentido.</p>
+          <div class="problem-list">
+            <div class="problem-item"><b>1</b><div><strong>Impacto repetido</strong><span>Joelho, tornozelo e quadril trabalham em alta intensidade durante arrancadas e mudanças de direção.</span></div></div>
+            <div class="problem-item"><b>2</b><div><strong>Recuperação negligenciada</strong><span>Muita gente joga forte no fim de semana, mas esquece do cuidado nos outros dias.</span></div></div>
+            <div class="problem-item"><b>3</b><div><strong>Escolhas genéricas</strong><span>Nem todo suplemento conversa com a realidade de quem joga futebol amador.</span></div></div>
           </div>
         </div>
-
-        <div class="ingredient-grid">
-          <article class="ingredient">
-            <strong>Colágeno tipo II</strong>
-            <p>Ingrediente associado a fórmulas de suporte articular, com foco em cartilagens e rotina de mobilidade.</p>
-            <small>Articulações</small>
-          </article>
-          <article class="ingredient">
-            <strong>Curcumina</strong>
-            <p>Composto presente na cúrcuma, conhecido por sua relação com processos antioxidantes e resposta inflamatória normal do organismo.</p>
-            <small>Rotina ativa</small>
-          </article>
-          <article class="ingredient">
-            <strong>MSM</strong>
-            <p>Fonte de enxofre orgânico usada em suplementos voltados a tecidos conectivos e cuidado articular.</p>
-            <small>Tecidos conectivos</small>
-          </article>
-          <article class="ingredient">
-            <strong>Vitamina D3 + K2</strong>
-            <p>Nutrientes que participam do metabolismo do cálcio e de funções ligadas a ossos e funcionamento do corpo.</p>
-            <small>Ossos</small>
-          </article>
-          <article class="ingredient">
-            <strong>Cálcio e magnésio</strong>
-            <p>Minerais importantes para o organismo, incluindo funções relacionadas a ossos, músculos e metabolismo energético.</p>
-            <small>Minerais</small>
-          </article>
-          <article class="ingredient">
-            <strong>Zinco</strong>
-            <p>Mineral que contribui para processos antioxidantes e funcionamento normal do sistema imune.</p>
-            <small>Proteção celular</small>
-          </article>
-        </div>
-      </div>
-      <div class="container">
-        <div class="warning">
-          Este produto não é medicamento. Não use como tratamento, cura ou prevenção de dores, lesões ou doenças. Em caso de dor persistente, lesão, gestação, lactação, uso de medicamentos ou condição de saúde, procure orientação profissional.
+        <div class="image-frame">
+          <img src="Images/Articulador (4).png" alt="Frascos do Articulador RZNH com frente, verso e informações do produto">
         </div>
       </div>
     </section>
 
-    <section id="rotina" class="section section-green">
+    <section id="beneficios" class="section section-muted">
       <div class="container">
         <div class="section-head center">
-          <div class="section-kicker">Como pensar a rotina</div>
-          <h2>O jogo não termina no apito final</h2>
-          <p>Futebol amador também exige cuidado. Hidratar, comer bem, dormir, fortalecer e escolher bons suplementos faz parte da construção de uma rotina mais inteligente.</p>
+          <div class="section-kicker">Benefícios práticos</div>
+          <h2>O que a fórmula ajuda a complementar na rotina do jogador</h2>
+          <p>Benefícios comunicados com responsabilidade: o produto não trata dor ou lesão, mas reúne nutrientes usados em fórmulas de suporte para pessoas ativas.</p>
         </div>
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <span class="icon">A</span>
+            <h3>Cuidado articular</h3>
+            <p>Colágeno tipo II, curcumina e MSM são ingredientes presentes em fórmulas voltadas ao suporte das articulações.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="icon">M</span>
+            <h3>Rotina muscular</h3>
+            <p>Magnésio, vitamina D e minerais ajudam a compor uma rotina nutricional para quem pratica atividade física.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="icon">O</span>
+            <h3>Ossos e estrutura</h3>
+            <p>Cálcio, vitamina D3 e K2 participam de funções relacionadas à saúde óssea dentro de uma alimentação equilibrada.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="icon">P</span>
+            <h3>Praticidade</h3>
+            <p>Uso diário em cápsulas, pensado para encaixar na rotina de quem trabalha, treina, joga e compra online.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <div class="routine-grid">
-          <article class="routine-card">
-            <span class="num">Antes do jogo</span>
-            <h3>Energia e preparo</h3>
-            <p>Priorize alimentação adequada, hidratação e aquecimento. Suplemento não compensa uma base mal feita.</p>
+    <section id="ingredientes" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Fórmula transparente</div>
+          <h2>O que cada ingrediente traz para a proposta do Articulador RZNH</h2>
+          <p>A combinação foi posicionada para suporte articular e rotina ativa. Confira sempre o rótulo completo antes da compra.</p>
+        </div>
+        <div class="ingredient-grid">
+          <article class="ingredient-card">
+            <span class="dose">20 mg</span>
+            <div><h3>Colágeno tipo II não desnaturado</h3><p>Ingrediente associado a fórmulas de suporte para cartilagens e mobilidade articular.</p></div>
           </article>
-          <article class="routine-card">
-            <span class="num">Depois do jogo</span>
-            <h3>Recuperação organizada</h3>
-            <p>Combine hidratação, refeição com proteína e carboidrato, descanso e cuidado com sinais de dor.</p>
+          <article class="ingredient-card">
+            <span class="dose">80 mg</span>
+            <div><h3>Curcumina</h3><p>Composto da cúrcuma muito usado em fórmulas voltadas ao cuidado de pessoas com rotina ativa.</p></div>
           </article>
-          <article class="routine-card">
-            <span class="num">Durante a semana</span>
-            <h3>Constância fora de campo</h3>
-            <p>O melhor resultado vem da repetição: sono, fortalecimento, mobilidade e suplementação bem orientada.</p>
+          <article class="ingredient-card">
+            <span class="dose">80 mg</span>
+            <div><h3>MSM</h3><p>Fonte de enxofre orgânico usada em suplementos relacionados a tecidos conectivos e suporte articular.</p></div>
           </article>
+          <article class="ingredient-card">
+            <span class="dose">D3 + K2</span>
+            <div><h3>Vitaminas D3 e K2</h3><p>Vitaminas importantes em rotinas nutricionais relacionadas à manutenção de ossos e funcionamento do corpo.</p></div>
+          </article>
+          <article class="ingredient-card">
+            <span class="dose">Ca + Mg</span>
+            <div><h3>Cálcio e magnésio</h3><p>Minerais presentes em processos de contração muscular, saúde óssea e rotina de pessoas fisicamente ativas.</p></div>
+          </article>
+          <article class="ingredient-card">
+            <span class="dose">Zn</span>
+            <div><h3>Zinco</h3><p>Mineral associado a funções metabólicas e antioxidantes, compondo a base nutricional da fórmula.</p></div>
+          </article>
+        </div>
+        <div class="label-warning">Produto não é medicamento. Não use como tratamento, cura ou prevenção de dores, lesões ou doenças. Em caso de dor persistente, lesão, gestação, lactação, uso de medicamentos ou condição de saúde, procure orientação profissional.</div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-kicker">Como encaixar na rotina</div>
+          <h2>O jogo não termina no apito final</h2>
+          <p>Suplemento funciona melhor dentro de um contexto de cuidado. A rotina abaixo ajuda a tornar a proposta mais completa.</p>
+        </div>
+        <div class="routine">
+          <div class="routine-step"><b>Antes</b><h3>Prepare o corpo</h3><p>Alimente-se bem, hidrate-se e aqueça antes da partida.</p></div>
+          <div class="routine-step"><b>Durante</b><h3>Controle o desgaste</h3><p>Respeite sinais de fadiga e mantenha hidratação.</p></div>
+          <div class="routine-step"><b>Depois</b><h3>Recupere melhor</h3><p>Priorize refeição, sono e descanso adequado.</p></div>
+          <div class="routine-step"><b>Todo dia</b><h3>Tenha consistência</h3><p>Use conforme recomendação do rótulo e orientação profissional.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="confianca" class="section section-green">
+      <div class="container trust-grid">
+        <div class="product-panel">
+          <img src="Images/Articulador (5).png" alt="Frasco do suplemento Articulador RZNH em fundo branco">
+          <div class="price-note">Confira preço, frete, prazo e vendedor diretamente no marketplace antes de finalizar a compra.</div>
+        </div>
+        <div>
+          <div class="section-kicker">Confiança para comprar</div>
+          <h2>Produto visível, rótulo conferível e canais oficiais</h2>
+          <p class="hero-copy">Para uma marca nova, transparência importa. Por isso, a página mostra embalagem, composição, modo de uso e links oficiais de compra.</p>
+          <div class="trust-list">
+            <article class="trust-card"><h3>Compra protegida</h3><p>Mercado Livre e Amazon oferecem checkout conhecido, acompanhamento do pedido e políticas próprias de compra.</p></article>
+            <article class="trust-card"><h3>Rótulo disponível</h3><p>Ingredientes, informação nutricional, alergênicos e recomendações de uso devem ser conferidos antes da compra.</p></article>
+            <article class="trust-card"><h3>Marca especializada</h3><p>A RZNH nasce com posicionamento em futebol, começando pelo cuidado fora de campo e expandindo para produtos da rotina do jogador.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comprar" class="section">
+      <div class="container">
+        <div class="buy-box">
+          <div>
+            <div class="section-kicker">Comprar Articulador RZNH</div>
+            <h2>Escolha o marketplace de sua preferência</h2>
+            <ul>
+              <li><span class="check">✓</span><span>Confira se o produto aparece como Articulador RZNH.</span></li>
+              <li><span class="check">✓</span><span>Verifique 60 cápsulas, composição e informações do vendedor.</span></li>
+              <li><span class="check">✓</span><span>Compare frete e prazo antes de finalizar a compra.</span></li>
+            </ul>
+          </div>
+          <div class="marketplace-card">
+            <a class="button button-primary button-full js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener" data-cta="buy_ml">Comprar no Mercado Livre</a>
+            <a class="button button-outline button-full js-cta" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/" target="_blank" rel="noopener" data-cta="buy_amazon">Ver na Amazon</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-head center">
+          <div class="section-kicker">Objeções comuns</div>
+          <h2>Antes de comprar, entenda o papel do produto</h2>
+        </div>
+        <div class="objection-grid">
+          <article class="objection-card"><h3>Ele substitui treino ou fisioterapia?</h3><p>Não. O suplemento complementa a rotina. Dor persistente, lesão ou limitação de movimento exigem avaliação profissional.</p></article>
+          <article class="objection-card"><h3>É só para jogador profissional?</h3><p>Não. A comunicação é voltada principalmente para quem joga futebol amador e quer cuidar melhor do corpo.</p></article>
+          <article class="objection-card"><h3>Por que comprar em marketplace?</h3><p>Porque facilita logística nacional, frete competitivo e checkout já conhecido pelo consumidor brasileiro.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container split">
-        <div class="section-head">
-          <div class="section-kicker">Produto real</div>
-          <h2>Veja embalagem, rótulo e informação nutricional</h2>
-          <p>Antes de comprar, confira nome completo, ingredientes, quantidade de cápsulas, vendedor e canal oficial. Isso ajuda a diferenciar o suplemento Articulador RZNH de outros produtos com nomes parecidos.</p>
-        </div>
-        <div class="visual-stack">
-          <div class="product-shot">
-            <img src="Images/Articulador (5).png" alt="Frasco do suplemento Articulador RZNH em fundo branco">
-          </div>
-          <div class="product-shot">
-            <img src="Images/Imagens anúncio Articulador Colágeno_sem fundo.png" alt="Informação nutricional e ingredientes do Articulador RZNH">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="comprar" class="section section-muted">
-      <div class="container split">
         <div>
-          <div class="section-head">
-            <div class="section-kicker">Onde comprar</div>
-            <h2>Compre pelos canais oficiais da RZNH</h2>
-            <p>A RZNH vende online por marketplaces para facilitar pagamento, entrega e acompanhamento do pedido. Escolha sua plataforma de preferência.</p>
-          </div>
-          <div class="trust-panel">
-            <h3>Checklist antes de finalizar</h3>
-            <ul class="list">
-              <li><span class="check">✓</span><span>Confira se o nome do produto e Articulador RZNH.</span></li>
-              <li><span class="check">✓</span><span>Verifique ingredientes, 60 cápsulas e informações do vendedor.</span></li>
-              <li><span class="check">✓</span><span>Use os links oficiais desta página para reduzir risco de confusão.</span></li>
-            </ul>
-          </div>
+          <div class="section-kicker">Rótulo e informação nutricional</div>
+          <h2>Veja embalagem e composição antes de decidir</h2>
+          <p>A transparência do rótulo ajuda a diferenciar o Articulador RZNH de produtos com nomes parecidos e facilita a conferência da fórmula.</p>
         </div>
-
-        <aside class="buy-box">
-          <h3>Articulador RZNH</h3>
-          <p>Suplemento alimentar com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco.</p>
-          <div class="price">
-            <span>De R$ 59,90</span>
-            <strong>R$ 37,90</strong>
-          </div>
-          <p><strong>Observação:</strong> preço e disponibilidade podem variar conforme marketplace.</p>
-          <div class="buy-actions">
-            <a class="button button-full button-primary" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener">Comprar no Mercado Livre</a>
-            <a class="button button-full button-outline" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/" target="_blank" rel="noopener">Ver na Amazon</a>
-          </div>
-        </aside>
+        <div class="image-frame">
+          <img src="Images/Imagens anúncio Articulador Colágeno_sem fundo.png" alt="Informação nutricional, ingredientes e alergênicos do Articulador RZNH">
+        </div>
       </div>
     </section>
 
-    <section id="faq" class="section">
+    <section id="duvidas" class="section section-muted">
       <div class="container">
         <div class="section-head center">
-          <div class="section-kicker">Perguntas frequentes</div>
+          <div class="section-kicker">FAQ</div>
           <h2>Dúvidas sobre o Articulador RZNH</h2>
         </div>
-
-        <div class="faq">
-          <details>
-            <summary>O que é o Articulador RZNH?</summary>
-            <p>O Articulador RZNH é um suplemento alimentar da marca RZNH formulado com colágeno tipo II, curcumina, MSM, vitaminas e minerais. Ele foi pensado para pessoas com rotina ativa, incluindo quem joga futebol com frequência.</p>
-          </details>
-          <details>
-            <summary>Quais ingredientes fazem parte da fórmula?</summary>
-            <p>A fórmula contém colágeno tipo II não desnaturado, curcumina, MSM, vitamina D3, vitamina K2, cálcio, magnésio e zinco.</p>
-          </details>
-          <details>
-            <summary>O Articulador RZNH é indicado para quem joga futebol?</summary>
-            <p>O produto tem comunicação voltada para pessoas que praticam futebol e outras atividades físicas. O uso deve fazer parte de uma rotina equilibrada, com alimentação adequada, descanso e orientação profissional quando necessário.</p>
-          </details>
-          <details>
-            <summary>O Articulador RZNH trata dor ou lesão?</summary>
-            <p>Não. O Articulador RZNH é um suplemento e não deve ser usado como tratamento, cura ou prevenção de dores e lesões. Em caso de dor persistente, lesão ou condição de saúde, procure um profissional de saúde.</p>
-          </details>
-          <details>
-            <summary>Onde comprar o Articulador RZNH?</summary>
-            <p>Você pode comprar pelos links oficiais da RZNH no Mercado Livre e na Amazon. Use os botões desta página para acessar os anúncios oficiais.</p>
-          </details>
-          <details>
-            <summary>Quem deve consultar um profissional antes de usar?</summary>
-            <p>Pessoas com condições de saúde preexistentes, gestantes, lactantes, menores de idade, pessoas que usam medicamentos contínuos ou que estejam em tratamento médico devem buscar orientação profissional antes de usar qualquer suplemento.</p>
-          </details>
-        </div>
+        <details>
+          <summary>O que é o Articulador RZNH?</summary>
+          <p>É um suplemento alimentar da marca RZNH formulado com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco. Foi pensado para pessoas com rotina ativa, incluindo quem joga futebol com frequência.</p>
+        </details>
+        <details>
+          <summary>Como tomar o Articulador RZNH?</summary>
+          <p>A recomendação do rótulo é ingerir 2 cápsulas ao dia. Confira sempre a embalagem e busque orientação profissional se tiver condição de saúde, usar medicamentos, estiver gestante ou lactante.</p>
+        </details>
+        <details>
+          <summary>O Articulador RZNH trata dor, lesão ou inflamação?</summary>
+          <p>Não. Ele é um suplemento alimentar e não deve ser usado como tratamento, cura ou prevenção de dores, lesões ou doenças.</p>
+        </details>
+        <details>
+          <summary>Onde comprar o Articulador RZNH?</summary>
+          <p>Você pode comprar pelos links oficiais da RZNH no Mercado Livre e na Amazon. Use os botões desta página para acessar os anúncios oficiais.</p>
+        </details>
+        <details>
+          <summary>Ele é indicado para quem joga futebol amador?</summary>
+          <p>A comunicação do produto é voltada para pessoas com rotina ativa e futebol. O uso deve fazer parte de uma rotina equilibrada, com alimentação, descanso, fortalecimento e orientação profissional quando necessário.</p>
+        </details>
       </div>
     </section>
 
-    <section class="section final">
-      <div class="container">
-        <h2>RZNH: futebol, rotina e cuidado fora de campo</h2>
-        <p>Conheça o Articulador RZNH pelos canais oficiais e escolha o marketplace de sua preferência.</p>
-        <div class="cta-row" style="justify-content: center;">
-          <a class="button button-primary" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener">Comprar no Mercado Livre</a>
-          <a class="button button-secondary" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/" target="_blank" rel="noopener">Ver na Amazon</a>
+    <section class="section section-green">
+      <div class="container final-cta">
+        <div class="section-kicker">RZNH</div>
+        <h2>Cuide da rotina fora de campo com mais intenção</h2>
+        <p>Conheça o Articulador RZNH e escolha o canal oficial de compra que fizer mais sentido para você.</p>
+        <div class="cta-row" style="justify-content:center">
+          <a class="button button-primary js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener" data-cta="final_ml">Comprar no Mercado Livre</a>
+          <a class="button button-ghost js-cta" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/" target="_blank" rel="noopener" data-cta="final_amazon">Ver na Amazon</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer>
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img class="footer-logo" src="Images/RZNH Logotipo.jpg" alt="RZNH">
+          <img src="Images/RZNH Logotipo.jpg" alt="Logotipo RZNH">
           <p>A RZNH é uma marca brasileira criada para quem vive o futebol, com produtos voltados para rotina ativa, compra online e praticidade.</p>
         </div>
         <div>
-          <strong>Links</strong>
+          <strong>Navegação</strong>
           <ul>
             <li><a href="#beneficios">Benefícios</a></li>
             <li><a href="#ingredientes">Ingredientes</a></li>
-            <li><a href="#rotina">Rotina</a></li>
+            <li><a href="#confianca">Confiança</a></li>
             <li><a href="#comprar">Comprar</a></li>
           </ul>
         </div>
         <div>
-          <strong>Contato</strong>
+          <strong>Canais oficiais</strong>
           <ul>
-            <li><a href="https://www.instagram.com/rznh.br/" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://wa.me/5519996715284" target="_blank" rel="noopener">WhatsApp</a></li>
-            <li>CNPJ: 42.471.890/0001-60</li>
-            <li>Contemporary Store LTDA</li>
+            <li><a class="js-cta" data-cta="footer_ml" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener">Mercado Livre</a></li>
+            <li><a class="js-cta" data-cta="footer_amazon" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/" target="_blank" rel="noopener">Amazon</a></li>
           </ul>
         </div>
       </div>
-      <div class="legal">
-        <p>© 2026 RZNH. Todos os direitos reservados.</p>
-        <p>Este produto não é medicamento. Não use como tratamento, cura ou prevenção de doenças, dores ou lesões. Mantenha fora do alcance de crianças. Produto isento de registro conforme RDC 27/2010 e 240/2018.</p>
-      </div>
+      <p class="legal">Este produto não é medicamento. Não use como tratamento, cura ou prevenção de doenças, dores ou lesões. Mantenha fora do alcance de crianças. Produto isento de registro conforme RDC 27/2010 e 240/2018. As informações desta página não substituem orientação de médico, nutricionista ou profissional de saúde.</p>
     </div>
   </footer>
 
-  <div class="sticky-mobile">
-    <a class="button button-primary button-full" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener">Comprar no Mercado Livre</a>
+  <div class="mobile-sticky">
+    <a class="button button-primary button-full js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener" data-cta="sticky_mobile_ml">Comprar no Mercado Livre</a>
   </div>
 
   <script type="application/ld+json">
@@ -859,16 +972,14 @@
         "@id": "https://rznh.com.br/#organization",
         "name": "RZNH",
         "url": "https://rznh.com.br/",
-        "logo": "https://rznh.com.br/Images/RZNH%20Logotipo.jpg",
-        "sameAs": ["https://www.instagram.com/rznh.br/"]
+        "logo": "https://rznh.com.br/Images/RZNH%20Logotipo.jpg"
       },
       {
         "@type": "Product",
         "@id": "https://rznh.com.br/#produto-articulador-rznh",
         "name": "Articulador RZNH",
-        "brand": {"@id": "https://rznh.com.br/#organization"},
-        "description": "Suplemento alimentar com colageno tipo II, curcumina, MSM, vitaminas D3 e K2, calcio, magnesio e zinco, voltado para pessoas com rotina ativa e quem joga futebol.",
-        "url": "https://rznh.com.br/",
+        "brand": {"@type": "Brand", "name": "RZNH"},
+        "description": "Suplemento alimentar com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco, voltado para pessoas com rotina ativa e quem joga futebol.",
         "image": [
           "https://rznh.com.br/Images/Articulador%20(2).png",
           "https://rznh.com.br/Images/Articulador%20(4).png",
@@ -895,28 +1006,40 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "O que e o Articulador RZNH?",
-            "acceptedAnswer": {"@type": "Answer", "text": "O Articulador RZNH e um suplemento alimentar da marca RZNH formulado com colageno tipo II, curcumina, MSM, vitaminas e minerais. Ele foi pensado para pessoas com rotina ativa, incluindo quem joga futebol com frequencia."}
+            "name": "O que é o Articulador RZNH?",
+            "acceptedAnswer": {"@type": "Answer", "text": "É um suplemento alimentar da marca RZNH formulado com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco. Foi pensado para pessoas com rotina ativa, incluindo quem joga futebol com frequência."}
           },
           {
             "@type": "Question",
-            "name": "Quais ingredientes fazem parte da formula?",
-            "acceptedAnswer": {"@type": "Answer", "text": "A formula contem colageno tipo II nao desnaturado, curcumina, MSM, vitamina D3, vitamina K2, calcio, magnesio e zinco."}
+            "name": "Como tomar o Articulador RZNH?",
+            "acceptedAnswer": {"@type": "Answer", "text": "A recomendação do rótulo é ingerir 2 cápsulas ao dia. Confira sempre a embalagem e busque orientação profissional se tiver condição de saúde, usar medicamentos, estiver gestante ou lactante."}
           },
           {
             "@type": "Question",
             "name": "Onde comprar o Articulador RZNH?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Voce pode comprar pelos links oficiais da RZNH no Mercado Livre e na Amazon."}
+            "acceptedAnswer": {"@type": "Answer", "text": "Você pode comprar pelos links oficiais da RZNH no Mercado Livre e na Amazon."}
           },
           {
             "@type": "Question",
-            "name": "O Articulador RZNH trata dor ou lesao?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Nao. O Articulador RZNH e um suplemento e nao deve ser usado como tratamento, cura ou prevencao de dores e lesoes."}
+            "name": "O Articulador RZNH trata dor, lesão ou inflamação?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Não. Ele é um suplemento alimentar e não deve ser usado como tratamento, cura ou prevenção de dores, lesões ou doenças."}
           }
         ]
       }
     ]
   }
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    document.querySelectorAll(".js-cta").forEach(function(link) {
+      link.addEventListener("click", function() {
+        window.dataLayer.push({
+          event: "rznh_cta_click",
+          cta_id: link.dataset.cta || "unknown",
+          destination: link.href
+        });
+      });
+    });
   </script>
 </body>
 </html>
