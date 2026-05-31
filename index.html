@@ -6,12 +6,12 @@
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Articulador RZNH | Suplemento para quem joga futebol</title>
-  <meta name="description" content="Articulador RZNH: suplemento alimentar com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco para quem joga futebol e mantém uma rotina ativa.">
+  <title>Articulador RZNH | Suplemento alimentar para quem joga bola</title>
+  <meta name="description" content="Articulador RZNH: suplemento alimentar em cápsulas com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco. Marca brasileira para quem joga bola.">
   <link rel="canonical" href="https://rznh.com.br/">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Articulador RZNH | Suplemento para futebol e rotina ativa">
-  <meta property="og:description" content="Fórmula com colágeno tipo II, curcumina, MSM, vitaminas e minerais. Compre pelos canais oficiais da RZNH.">
+  <meta property="og:title" content="Articulador RZNH | Para a rotina de quem joga bola">
+  <meta property="og:description" content="Suplemento alimentar em cápsulas com ingredientes declarados no rótulo. Compre pelos canais oficiais da RZNH.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rznh.com.br/">
   <meta property="og:image" content="https://rznh.com.br/Images/Articulador%20(2).png">
@@ -21,7 +21,7 @@
       --green: #115c3b;
       --green-dark: #063820;
       --green-soft: #eaf6ed;
-      --green-bright: #5dbb63;
+      --lime: #67c95f;
       --yellow: #f2c230;
       --yellow-soft: #fff4ca;
       --ink: #1c1c1c;
@@ -132,7 +132,7 @@
       min-height: calc(100vh - 110px);
       color: var(--white);
       background:
-        linear-gradient(90deg, rgba(6,56,32,0.96) 0%, rgba(6,56,32,0.88) 42%, rgba(6,56,32,0.36) 100%),
+        linear-gradient(90deg, rgba(6,56,32,0.97) 0%, rgba(6,56,32,0.88) 43%, rgba(6,56,32,0.30) 100%),
         url("Images/Articulador (2).png") center right / cover no-repeat;
     }
 
@@ -238,14 +238,16 @@
     }
     .section-green .section-head p { color: rgba(255,255,255,0.86); }
 
-    .who-grid {
+    .who-grid,
+    .reason-grid,
+    .objection-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
 
     .signal-card,
-    .benefit-card,
+    .reason-card,
     .ingredient-card,
     .objection-card,
     .trust-card {
@@ -257,7 +259,7 @@
 
     .signal-card { min-height: 190px; }
     .signal-card .number,
-    .benefit-card .icon,
+    .reason-card .icon,
     .ingredient-card .dose {
       display: inline-flex;
       align-items: center;
@@ -273,7 +275,7 @@
     }
 
     .signal-card h3,
-    .benefit-card h3,
+    .reason-card h3,
     .ingredient-card h3,
     .objection-card h3,
     .trust-card h3 {
@@ -282,7 +284,7 @@
     }
 
     .signal-card p,
-    .benefit-card p,
+    .reason-card p,
     .ingredient-card p,
     .objection-card p,
     .trust-card p {
@@ -297,13 +299,13 @@
       align-items: center;
     }
 
-    .problem-list {
+    .culture-list {
       display: grid;
       gap: 14px;
       margin-top: 26px;
     }
 
-    .problem-item {
+    .culture-item {
       display: grid;
       grid-template-columns: 34px 1fr;
       gap: 14px;
@@ -314,7 +316,7 @@
       background: rgba(255,255,255,0.08);
     }
 
-    .problem-item b {
+    .culture-item b {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -326,8 +328,8 @@
       font-weight: 950;
     }
 
-    .problem-item strong { display: block; margin-bottom: 4px; }
-    .problem-item span { color: rgba(255,255,255,0.82); }
+    .culture-item strong { display: block; margin-bottom: 4px; }
+    .culture-item span { color: rgba(255,255,255,0.82); }
 
     .image-frame {
       border-radius: var(--radius);
@@ -342,14 +344,8 @@
       object-fit: cover;
     }
 
-    .benefit-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .benefit-card {
-      min-height: 232px;
+    .reason-card {
+      min-height: 220px;
       border-top: 5px solid var(--green);
     }
 
@@ -490,12 +486,6 @@
       background: var(--muted);
     }
 
-    .objection-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
     .label-warning {
       margin-top: 28px;
       border-left: 5px solid var(--yellow);
@@ -604,7 +594,7 @@
       }
       .hero-content { max-width: 680px; }
       .proof-grid,
-      .benefit-grid,
+      .reason-grid,
       .routine,
       .objection-grid,
       .footer-grid {
@@ -632,7 +622,7 @@
       .button { width: 100%; }
       .proof-grid,
       .who-grid,
-      .benefit-grid,
+      .reason-grid,
       .ingredient-grid,
       .routine,
       .objection-grid,
@@ -662,12 +652,12 @@
         <span>Articulador</span>
       </a>
       <nav class="nav-links" aria-label="Navegação principal">
-        <a href="#beneficios">Benefícios</a>
-        <a href="#ingredientes">Ingredientes</a>
+        <a href="#produto">Produto</a>
+        <a href="#formula">Fórmula</a>
         <a href="#confianca">Confiança</a>
         <a href="#duvidas">Dúvidas</a>
       </nav>
-      <a class="button button-primary js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener" data-cta="header_ml">Comprar agora</a>
+      <a class="button button-primary js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636?utm_source=site&utm_medium=cta&utm_campaign=rznh_lp&utm_content=header_ml" target="_blank" rel="noopener" data-cta="header_ml">Comprar agora</a>
     </div>
   </header>
 
@@ -675,46 +665,46 @@
     <section class="hero" aria-label="Articulador RZNH">
       <div class="container">
         <div class="hero-content">
-          <span class="eyebrow">Suplemento alimentar para rotina ativa</span>
-          <h1>Suporte articular para quem joga futebol toda semana</h1>
-          <p class="hero-copy">Articulador RZNH combina colágeno tipo II, curcumina, MSM, vitaminas e minerais em uma fórmula pensada para quem vive o impacto, o corre e a constância do futebol.</p>
+          <span class="eyebrow">Marca brasileira para quem joga bola</span>
+          <h1>Articulador RZNH: suplemento alimentar para a rotina da pelada</h1>
+          <p class="hero-copy">Uma fórmula em cápsulas com colágeno tipo II, curcumina, MSM, vitaminas e minerais. Feita para entrar na rotina de adultos que jogam bola, trabalham, vivem a semana e não abrem mão da resenha.</p>
           <div class="cta-row">
-            <a class="button button-primary js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener" data-cta="hero_ml">Comprar no Mercado Livre</a>
-            <a class="button button-ghost js-cta" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/" target="_blank" rel="noopener" data-cta="hero_amazon">Ver na Amazon</a>
+            <a class="button button-primary js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636?utm_source=site&utm_medium=cta&utm_campaign=rznh_lp&utm_content=hero_ml" target="_blank" rel="noopener" data-cta="hero_ml">Comprar no Mercado Livre</a>
+            <a class="button button-ghost js-cta" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/?utm_source=site&utm_medium=cta&utm_campaign=rznh_lp&utm_content=hero_amazon" target="_blank" rel="noopener" data-cta="hero_amazon">Ver na Amazon</a>
           </div>
-          <p class="microcopy">60 cápsulas. Compra online. Envio e checkout pelos marketplaces.</p>
-          <div class="proof-grid" aria-label="Diferenciais do produto">
-            <div class="proof-item"><strong>7</strong><span>ativos na fórmula</span></div>
+          <p class="microcopy">60 cápsulas. 30 porções. Recomendação do rótulo: 2 cápsulas ao dia.</p>
+          <div class="proof-grid" aria-label="Informações do produto">
             <div class="proof-item"><strong>60</strong><span>cápsulas por frasco</span></div>
-            <div class="proof-item"><strong>BR</strong><span>marca brasileira de futebol</span></div>
+            <div class="proof-item"><strong>30</strong><span>porções por embalagem</span></div>
             <div class="proof-item"><strong>2</strong><span>cápsulas ao dia</span></div>
+            <div class="proof-item"><strong>BR</strong><span>marca brasileira</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section id="produto" class="section">
       <div class="container">
         <div class="section-head center">
-          <div class="section-kicker">Para quem faz sentido</div>
-          <h2>Para o jogador amador que quer cuidar melhor da rotina fora de campo</h2>
-          <p>O futebol de fim de semana também cobra do corpo: arranques, giros, impacto, divididas e repetição. A proposta da RZNH é complementar a rotina de cuidado, sem promessa milagrosa.</p>
+          <div class="section-kicker">Para quem é</div>
+          <h2>Para adulto que joga bola e quer uma rotina mais organizada fora de campo</h2>
+          <p>A RZNH nasce para conversar com quem vive a pelada de verdade: grupo cheio, confirmado que some, jogo pegado e resenha depois. O Articulador é o primeiro produto dessa linha.</p>
         </div>
         <div class="who-grid">
           <article class="signal-card">
             <span class="number">01</span>
-            <h3>Quem joga com frequência</h3>
-            <p>Para quem tem pelada, society, campo ou treino toda semana e quer manter consistência na rotina.</p>
+            <h3>Quem joga toda semana</h3>
+            <p>Para quem tem society, campo, futsal ou aquela pelada marcada no grupo.</p>
           </article>
           <article class="signal-card">
             <span class="number">02</span>
-            <h3>Quem sente o impacto do jogo</h3>
-            <p>Para pessoas que querem dar mais atenção a articulações, músculos, ossos e recuperação geral.</p>
+            <h3>Quem gosta da resenha</h3>
+            <p>Produto de uma marca que entende que futebol amador não é só jogo: é grupo, zoeira e rotina.</p>
           </article>
           <article class="signal-card">
             <span class="number">03</span>
-            <h3>Quem prefere praticidade</h3>
-            <p>Uma fórmula em cápsulas, com compra online e canais oficiais em marketplaces conhecidos.</p>
+            <h3>Quem compra online</h3>
+            <p>Compra pelos canais oficiais em marketplaces conhecidos, com checkout e logística das plataformas.</p>
           </article>
         </div>
       </div>
@@ -723,13 +713,13 @@
     <section class="section section-green">
       <div class="container split">
         <div>
-          <div class="section-kicker">O problema real</div>
-          <h2>O corpo sente quando a rotina é só jogar e não cuidar</h2>
-          <p class="hero-copy">O Articulador RZNH entra como parte de uma rotina mais inteligente: alimentação, hidratação, descanso, fortalecimento e suplementação quando fizer sentido.</p>
-          <div class="problem-list">
-            <div class="problem-item"><b>1</b><div><strong>Impacto repetido</strong><span>Joelho, tornozelo e quadril trabalham em alta intensidade durante arrancadas e mudanças de direção.</span></div></div>
-            <div class="problem-item"><b>2</b><div><strong>Recuperação negligenciada</strong><span>Muita gente joga forte no fim de semana, mas esquece do cuidado nos outros dias.</span></div></div>
-            <div class="problem-item"><b>3</b><div><strong>Escolhas genéricas</strong><span>Nem todo suplemento conversa com a realidade de quem joga futebol amador.</span></div></div>
+          <div class="section-kicker">A marca</div>
+          <h2>RZNH é para quem joga bola, não para laboratório de pose</h2>
+          <p class="hero-copy">A gente gosta do futebol real: chute mascado, camisa repetida, grupo do WhatsApp pegando fogo e churrasco depois do jogo. O produto é sério; a conversa pode ser de resenha.</p>
+          <div class="culture-list">
+            <div class="culture-item"><b>1</b><div><strong>Pelada real</strong><span>Campo, society, futsal, rachão e jogo entre amigos.</span></div></div>
+            <div class="culture-item"><b>2</b><div><strong>Rotina adulta</strong><span>Trabalho, família, treino quando dá e bola quando o grupo fecha.</span></div></div>
+            <div class="culture-item"><b>3</b><div><strong>Produto sem promessa milagrosa</strong><span>Suplemento alimentar em cápsulas, com rótulo e informações disponíveis para conferência.</span></div></div>
           </div>
         </div>
         <div class="image-frame">
@@ -738,87 +728,82 @@
       </div>
     </section>
 
-    <section id="beneficios" class="section section-muted">
+    <section class="section section-muted">
       <div class="container">
         <div class="section-head center">
-          <div class="section-kicker">Benefícios práticos</div>
-          <h2>O que a fórmula ajuda a complementar na rotina do jogador</h2>
-          <p>Benefícios comunicados com responsabilidade: o produto não trata dor ou lesão, mas reúne nutrientes usados em fórmulas de suporte para pessoas ativas.</p>
+          <div class="section-kicker">Por que olhar o rótulo</div>
+          <h2>Informação clara antes da compra</h2>
+          <p>Antes de escolher qualquer suplemento, faz sentido conferir composição, modo de uso, alergênicos e avisos do rótulo.</p>
         </div>
-        <div class="benefit-grid">
-          <article class="benefit-card">
-            <span class="icon">A</span>
-            <h3>Cuidado articular</h3>
-            <p>Colágeno tipo II, curcumina e MSM são ingredientes presentes em fórmulas voltadas ao suporte das articulações.</p>
+        <div class="reason-grid">
+          <article class="reason-card">
+            <span class="icon">R</span>
+            <h3>Rótulo visível</h3>
+            <p>Informação nutricional, ingredientes, alergênicos e recomendações aparecem na embalagem.</p>
           </article>
-          <article class="benefit-card">
-            <span class="icon">M</span>
-            <h3>Rotina muscular</h3>
-            <p>Magnésio, vitamina D e minerais ajudam a compor uma rotina nutricional para quem pratica atividade física.</p>
+          <article class="reason-card">
+            <span class="icon">U</span>
+            <h3>Uso simples</h3>
+            <p>A recomendação declarada no rótulo é ingerir 2 cápsulas ao dia.</p>
           </article>
-          <article class="benefit-card">
-            <span class="icon">O</span>
-            <h3>Ossos e estrutura</h3>
-            <p>Cálcio, vitamina D3 e K2 participam de funções relacionadas à saúde óssea dentro de uma alimentação equilibrada.</p>
-          </article>
-          <article class="benefit-card">
-            <span class="icon">P</span>
-            <h3>Praticidade</h3>
-            <p>Uso diário em cápsulas, pensado para encaixar na rotina de quem trabalha, treina, joga e compra online.</p>
+          <article class="reason-card">
+            <span class="icon">C</span>
+            <h3>Canais oficiais</h3>
+            <p>A compra acontece nos links oficiais da RZNH em Mercado Livre e Amazon.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="ingredientes" class="section">
+    <section id="formula" class="section">
       <div class="container">
         <div class="section-head">
-          <div class="section-kicker">Fórmula transparente</div>
-          <h2>O que cada ingrediente traz para a proposta do Articulador RZNH</h2>
-          <p>A combinação foi posicionada para suporte articular e rotina ativa. Confira sempre o rótulo completo antes da compra.</p>
+          <div class="section-kicker">Fórmula</div>
+          <h2>O que vem na porção de 2 cápsulas</h2>
+          <p>Composição informada conforme o rótulo do produto. Confira sempre a embalagem antes do consumo.</p>
         </div>
         <div class="ingredient-grid">
           <article class="ingredient-card">
             <span class="dose">20 mg</span>
-            <div><h3>Colágeno tipo II não desnaturado</h3><p>Ingrediente associado a fórmulas de suporte para cartilagens e mobilidade articular.</p></div>
+            <div><h3>Colágeno tipo II não desnaturado</h3><p>Ingrediente declarado na informação nutricional do produto.</p></div>
           </article>
           <article class="ingredient-card">
             <span class="dose">80 mg</span>
-            <div><h3>Curcumina</h3><p>Composto da cúrcuma muito usado em fórmulas voltadas ao cuidado de pessoas com rotina ativa.</p></div>
+            <div><h3>Curcumina</h3><p>Composto presente no extrato de rizomas de Curcuma longa.</p></div>
           </article>
           <article class="ingredient-card">
             <span class="dose">80 mg</span>
-            <div><h3>MSM</h3><p>Fonte de enxofre orgânico usada em suplementos relacionados a tecidos conectivos e suporte articular.</p></div>
+            <div><h3>MSM</h3><p>Metilsulfonilmetano declarado na porção do rótulo.</p></div>
           </article>
           <article class="ingredient-card">
             <span class="dose">D3 + K2</span>
-            <div><h3>Vitaminas D3 e K2</h3><p>Vitaminas importantes em rotinas nutricionais relacionadas à manutenção de ossos e funcionamento do corpo.</p></div>
+            <div><h3>Vitaminas D3 e K2</h3><p>Vitamina D: 50 mcg. Vitamina K: 24 mcg por porção.</p></div>
           </article>
           <article class="ingredient-card">
             <span class="dose">Ca + Mg</span>
-            <div><h3>Cálcio e magnésio</h3><p>Minerais presentes em processos de contração muscular, saúde óssea e rotina de pessoas fisicamente ativas.</p></div>
+            <div><h3>Cálcio e magnésio</h3><p>Cálcio: 204 mg. Magnésio: 100 mg por porção.</p></div>
           </article>
           <article class="ingredient-card">
             <span class="dose">Zn</span>
-            <div><h3>Zinco</h3><p>Mineral associado a funções metabólicas e antioxidantes, compondo a base nutricional da fórmula.</p></div>
+            <div><h3>Zinco</h3><p>Zinco: 11 mg por porção, conforme informação nutricional.</p></div>
           </article>
         </div>
-        <div class="label-warning">Produto não é medicamento. Não use como tratamento, cura ou prevenção de dores, lesões ou doenças. Em caso de dor persistente, lesão, gestação, lactação, uso de medicamentos ou condição de saúde, procure orientação profissional.</div>
+        <div class="label-warning">Este produto não é medicamento. Não use como tratamento, cura ou prevenção de dores, lesões ou doenças. Produto indicado para adultos. Não deve ser consumido por gestantes, lactantes e crianças.</div>
       </div>
     </section>
 
     <section class="section section-muted">
       <div class="container">
         <div class="section-head center">
-          <div class="section-kicker">Como encaixar na rotina</div>
-          <h2>O jogo não termina no apito final</h2>
-          <p>Suplemento funciona melhor dentro de um contexto de cuidado. A rotina abaixo ajuda a tornar a proposta mais completa.</p>
+          <div class="section-kicker">Rotina da pelada</div>
+          <h2>O jogo é uma parte da semana. A rotina é o resto todo.</h2>
+          <p>Produto nenhum substitui alimentação, sono, hidratação e orientação profissional. A RZNH entra na conversa com informação clara e linguagem de quem joga.</p>
         </div>
         <div class="routine">
-          <div class="routine-step"><b>Antes</b><h3>Prepare o corpo</h3><p>Alimente-se bem, hidrate-se e aqueça antes da partida.</p></div>
-          <div class="routine-step"><b>Durante</b><h3>Controle o desgaste</h3><p>Respeite sinais de fadiga e mantenha hidratação.</p></div>
-          <div class="routine-step"><b>Depois</b><h3>Recupere melhor</h3><p>Priorize refeição, sono e descanso adequado.</p></div>
-          <div class="routine-step"><b>Todo dia</b><h3>Tenha consistência</h3><p>Use conforme recomendação do rótulo e orientação profissional.</p></div>
+          <div class="routine-step"><b>Antes</b><h3>Organize o básico</h3><p>Comida, água, horário e aquele lembrete no grupo.</p></div>
+          <div class="routine-step"><b>Durante</b><h3>Jogue com cabeça</h3><p>Pelada boa é a que termina com todo mundo inteiro para a próxima.</p></div>
+          <div class="routine-step"><b>Depois</b><h3>Resenha liberada</h3><p>Descanso, refeição e o comentário obrigatório do lance perdido.</p></div>
+          <div class="routine-step"><b>Todo dia</b><h3>Consistência</h3><p>Se usar suplemento, siga o rótulo e respeite sua rotina.</p></div>
         </div>
       </div>
     </section>
@@ -827,16 +812,16 @@
       <div class="container trust-grid">
         <div class="product-panel">
           <img src="Images/Articulador (5).png" alt="Frasco do suplemento Articulador RZNH em fundo branco">
-          <div class="price-note">Confira preço, frete, prazo e vendedor diretamente no marketplace antes de finalizar a compra.</div>
+          <div class="price-note">Confira preço, frete, prazo, vendedor e disponibilidade diretamente no marketplace antes de finalizar a compra.</div>
         </div>
         <div>
           <div class="section-kicker">Confiança para comprar</div>
-          <h2>Produto visível, rótulo conferível e canais oficiais</h2>
-          <p class="hero-copy">Para uma marca nova, transparência importa. Por isso, a página mostra embalagem, composição, modo de uso e links oficiais de compra.</p>
+          <h2>Produto visível, rótulo conferível e links oficiais</h2>
+          <p class="hero-copy">Para uma marca nova, transparência importa. A página mostra embalagem, composição, modo de uso e canais oficiais de compra.</p>
           <div class="trust-list">
-            <article class="trust-card"><h3>Compra protegida</h3><p>Mercado Livre e Amazon oferecem checkout conhecido, acompanhamento do pedido e políticas próprias de compra.</p></article>
-            <article class="trust-card"><h3>Rótulo disponível</h3><p>Ingredientes, informação nutricional, alergênicos e recomendações de uso devem ser conferidos antes da compra.</p></article>
-            <article class="trust-card"><h3>Marca especializada</h3><p>A RZNH nasce com posicionamento em futebol, começando pelo cuidado fora de campo e expandindo para produtos da rotina do jogador.</p></article>
+            <article class="trust-card"><h3>Compra em marketplace</h3><p>Mercado Livre e Amazon oferecem checkout conhecido, acompanhamento do pedido e políticas próprias de compra.</p></article>
+            <article class="trust-card"><h3>Informação de rótulo</h3><p>Ingredientes, informação nutricional, alergênicos e recomendações de uso devem ser conferidos antes da compra.</p></article>
+            <article class="trust-card"><h3>Marca de futebol amador</h3><p>A RZNH começa com o Articulador e pretende ampliar o mix para produtos da rotina de quem joga bola.</p></article>
           </div>
         </div>
       </div>
@@ -847,16 +832,16 @@
         <div class="buy-box">
           <div>
             <div class="section-kicker">Comprar Articulador RZNH</div>
-            <h2>Escolha o marketplace de sua preferência</h2>
+            <h2>Escolha o canal oficial de compra</h2>
             <ul>
-              <li><span class="check">✓</span><span>Confira se o produto aparece como Articulador RZNH.</span></li>
+              <li><span class="check">✓</span><span>Confira se o anúncio aparece como Articulador RZNH.</span></li>
               <li><span class="check">✓</span><span>Verifique 60 cápsulas, composição e informações do vendedor.</span></li>
-              <li><span class="check">✓</span><span>Compare frete e prazo antes de finalizar a compra.</span></li>
+              <li><span class="check">✓</span><span>Compare frete, prazo e condições do marketplace.</span></li>
             </ul>
           </div>
           <div class="marketplace-card">
-            <a class="button button-primary button-full js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener" data-cta="buy_ml">Comprar no Mercado Livre</a>
-            <a class="button button-outline button-full js-cta" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/" target="_blank" rel="noopener" data-cta="buy_amazon">Ver na Amazon</a>
+            <a class="button button-primary button-full js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636?utm_source=site&utm_medium=cta&utm_campaign=rznh_lp&utm_content=buy_ml" target="_blank" rel="noopener" data-cta="buy_ml">Comprar no Mercado Livre</a>
+            <a class="button button-outline button-full js-cta" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/?utm_source=site&utm_medium=cta&utm_campaign=rznh_lp&utm_content=buy_amazon" target="_blank" rel="noopener" data-cta="buy_amazon">Ver na Amazon</a>
           </div>
         </div>
       </div>
@@ -865,12 +850,12 @@
     <section class="section section-muted">
       <div class="container">
         <div class="section-head center">
-          <div class="section-kicker">Objeções comuns</div>
+          <div class="section-kicker">Dúvidas comuns</div>
           <h2>Antes de comprar, entenda o papel do produto</h2>
         </div>
         <div class="objection-grid">
-          <article class="objection-card"><h3>Ele substitui treino ou fisioterapia?</h3><p>Não. O suplemento complementa a rotina. Dor persistente, lesão ou limitação de movimento exigem avaliação profissional.</p></article>
-          <article class="objection-card"><h3>É só para jogador profissional?</h3><p>Não. A comunicação é voltada principalmente para quem joga futebol amador e quer cuidar melhor do corpo.</p></article>
+          <article class="objection-card"><h3>Ele substitui orientação profissional?</h3><p>Não. Suplemento alimentar não substitui alimentação equilibrada nem orientação de profissional de saúde quando necessária.</p></article>
+          <article class="objection-card"><h3>É só para jogador profissional?</h3><p>Não. A comunicação da RZNH é voltada principalmente para o futebol amador e para quem joga bola na rotina.</p></article>
           <article class="objection-card"><h3>Por que comprar em marketplace?</h3><p>Porque facilita logística nacional, frete competitivo e checkout já conhecido pelo consumidor brasileiro.</p></article>
         </div>
       </div>
@@ -879,9 +864,9 @@
     <section class="section">
       <div class="container split">
         <div>
-          <div class="section-kicker">Rótulo e informação nutricional</div>
-          <h2>Veja embalagem e composição antes de decidir</h2>
-          <p>A transparência do rótulo ajuda a diferenciar o Articulador RZNH de produtos com nomes parecidos e facilita a conferência da fórmula.</p>
+          <div class="section-kicker">Rótulo</div>
+          <h2>Confira embalagem e composição</h2>
+          <p>A transparência do rótulo ajuda a diferenciar o Articulador RZNH de produtos com nomes parecidos e facilita a conferência antes da compra.</p>
         </div>
         <div class="image-frame">
           <img src="Images/Imagens anúncio Articulador Colágeno_sem fundo.png" alt="Informação nutricional, ingredientes e alergênicos do Articulador RZNH">
@@ -897,7 +882,7 @@
         </div>
         <details>
           <summary>O que é o Articulador RZNH?</summary>
-          <p>É um suplemento alimentar da marca RZNH formulado com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco. Foi pensado para pessoas com rotina ativa, incluindo quem joga futebol com frequência.</p>
+          <p>É um suplemento alimentar em cápsulas da marca RZNH, com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco.</p>
         </details>
         <details>
           <summary>Como tomar o Articulador RZNH?</summary>
@@ -912,8 +897,8 @@
           <p>Você pode comprar pelos links oficiais da RZNH no Mercado Livre e na Amazon. Use os botões desta página para acessar os anúncios oficiais.</p>
         </details>
         <details>
-          <summary>Ele é indicado para quem joga futebol amador?</summary>
-          <p>A comunicação do produto é voltada para pessoas com rotina ativa e futebol. O uso deve fazer parte de uma rotina equilibrada, com alimentação, descanso, fortalecimento e orientação profissional quando necessário.</p>
+          <summary>O produto contém alergênicos?</summary>
+          <p>Segundo o rótulo, pode conter leite, soja, pinoli e crustáceos. Não contém glúten.</p>
         </details>
       </div>
     </section>
@@ -921,11 +906,11 @@
     <section class="section section-green">
       <div class="container final-cta">
         <div class="section-kicker">RZNH</div>
-        <h2>Cuide da rotina fora de campo com mais intenção</h2>
+        <h2>Da pelada para a rotina</h2>
         <p>Conheça o Articulador RZNH e escolha o canal oficial de compra que fizer mais sentido para você.</p>
         <div class="cta-row" style="justify-content:center">
-          <a class="button button-primary js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener" data-cta="final_ml">Comprar no Mercado Livre</a>
-          <a class="button button-ghost js-cta" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/" target="_blank" rel="noopener" data-cta="final_amazon">Ver na Amazon</a>
+          <a class="button button-primary js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636?utm_source=site&utm_medium=cta&utm_campaign=rznh_lp&utm_content=final_ml" target="_blank" rel="noopener" data-cta="final_ml">Comprar no Mercado Livre</a>
+          <a class="button button-ghost js-cta" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/?utm_source=site&utm_medium=cta&utm_campaign=rznh_lp&utm_content=final_amazon" target="_blank" rel="noopener" data-cta="final_amazon">Ver na Amazon</a>
         </div>
       </div>
     </section>
@@ -936,13 +921,13 @@
       <div class="footer-grid">
         <div>
           <img src="Images/RZNH Logotipo.jpg" alt="Logotipo RZNH">
-          <p>A RZNH é uma marca brasileira criada para quem vive o futebol, com produtos voltados para rotina ativa, compra online e praticidade.</p>
+          <p>A RZNH é uma marca brasileira criada para quem vive o futebol amador, com produtos pensados para a rotina de quem joga bola.</p>
         </div>
         <div>
           <strong>Navegação</strong>
           <ul>
-            <li><a href="#beneficios">Benefícios</a></li>
-            <li><a href="#ingredientes">Ingredientes</a></li>
+            <li><a href="#produto">Produto</a></li>
+            <li><a href="#formula">Fórmula</a></li>
             <li><a href="#confianca">Confiança</a></li>
             <li><a href="#comprar">Comprar</a></li>
           </ul>
@@ -950,8 +935,8 @@
         <div>
           <strong>Canais oficiais</strong>
           <ul>
-            <li><a class="js-cta" data-cta="footer_ml" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener">Mercado Livre</a></li>
-            <li><a class="js-cta" data-cta="footer_amazon" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/" target="_blank" rel="noopener">Amazon</a></li>
+            <li><a class="js-cta" data-cta="footer_ml" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636?utm_source=site&utm_medium=cta&utm_campaign=rznh_lp&utm_content=footer_ml" target="_blank" rel="noopener">Mercado Livre</a></li>
+            <li><a class="js-cta" data-cta="footer_amazon" href="https://www.amazon.com.br/Articulador-RZNH-Curcumina-Vitaminas-Suplemento/dp/B0FYRGVJNG/?utm_source=site&utm_medium=cta&utm_campaign=rznh_lp&utm_content=footer_amazon" target="_blank" rel="noopener">Amazon</a></li>
           </ul>
         </div>
       </div>
@@ -960,7 +945,7 @@
   </footer>
 
   <div class="mobile-sticky">
-    <a class="button button-primary button-full js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636" target="_blank" rel="noopener" data-cta="sticky_mobile_ml">Comprar no Mercado Livre</a>
+    <a class="button button-primary button-full js-cta" href="https://www.mercadolivre.com.br/articulador-rznh-colageno-tipo-2-curcumina-msm-vitaminas-d3-k2-calcio-magnesio-e-zinco-60-capsulas-suplemento-alimentar/p/MLB62592636?utm_source=site&utm_medium=cta&utm_campaign=rznh_lp&utm_content=sticky_mobile_ml" target="_blank" rel="noopener" data-cta="sticky_mobile_ml">Comprar no Mercado Livre</a>
   </div>
 
   <script type="application/ld+json">
@@ -979,12 +964,13 @@
         "@id": "https://rznh.com.br/#produto-articulador-rznh",
         "name": "Articulador RZNH",
         "brand": {"@type": "Brand", "name": "RZNH"},
-        "description": "Suplemento alimentar com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco, voltado para pessoas com rotina ativa e quem joga futebol.",
+        "description": "Suplemento alimentar em cápsulas com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco.",
         "image": [
           "https://rznh.com.br/Images/Articulador%20(2).png",
           "https://rznh.com.br/Images/Articulador%20(4).png",
           "https://rznh.com.br/Images/Articulador%20(5).png"
         ],
+        "gtin13": "7908946504114",
         "offers": [
           {
             "@type": "Offer",
@@ -1007,7 +993,7 @@
           {
             "@type": "Question",
             "name": "O que é o Articulador RZNH?",
-            "acceptedAnswer": {"@type": "Answer", "text": "É um suplemento alimentar da marca RZNH formulado com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco. Foi pensado para pessoas com rotina ativa, incluindo quem joga futebol com frequência."}
+            "acceptedAnswer": {"@type": "Answer", "text": "É um suplemento alimentar em cápsulas da marca RZNH, com colágeno tipo II, curcumina, MSM, vitaminas D3 e K2, cálcio, magnésio e zinco."}
           },
           {
             "@type": "Question",
